@@ -1,0 +1,246 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400;500;600&family=Be+Vietnam+Pro:wght@200;400;600&family=IBM+Plex+Sans&family=Inter:wght@300&family=Public+Sans:wght@500;600&display=swap');
+
+/* Hide scrollbar for Chrome, Safari and Opera while still keeping functionality */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #F4F4F4;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+p {
+    color: #000;
+}
+
+/* TRANSITION */
+
+a,
+.button {
+    transition: all 300ms ease;
+}
+
+
+/* DESKTOP NAV */
+
+.logo img {
+    /* display: flex;
+    justify-content: flex-start; */
+    width: 6em;
+    margin: 3px 0px 0px 15px;
+    animation: float 3s ease-in-out infinite;
+    animation-timing-function: linear;
+    filter: drop-shadow(-3px 3px 4px rgba(0, 0, 0, 0.2));
+}
+
+/* SECTIONS */
+section {
+    padding-top: 4vh;
+    height: 96vh;
+    margin: 0 10rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+}
+
+.section-container {
+    /* not sure if I need this .section-container here */
+    display: flex;
+}
+
+/* PROFILE SECTION */
+#profile {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    height: 80vh;
+}
+
+.section__pic-container {
+    display: flex;
+    height: 600px;
+    width: 400px;
+    margin: auto 0;
+    margin-top: 15px;
+}
+
+
+.section__text {
+    width: 42%;
+    align-self: center;
+    text-align: center;
+}
+
+.section__text__p1 {
+    text-align: center;
+
+    color: #797979;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.5px;
+}
+
+h1 {
+    color: #242020;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-weight: 600;
+    font-size: 3rem;
+    font-style: normal;
+    line-height: normal;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.section__text__p2 {
+    margin-bottom: 1rem;
+
+    color: #797979;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-weight: 600;
+    font-size: 1.75rem;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.7px;
+}
+
+.desc {
+    margin-bottom: 1.8rem;
+
+    color: #000;
+    text-align: center;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.36px;
+}
+
+#socials-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    gap: 1rem;
+}
+
+/* ICONS */
+
+.icon {
+    cursor: pointer;
+    height: 2rem;
+}
+
+.icon:hover {
+    opacity: 65%;
+}
+
+/* BUTTONS */
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.btn {
+    border: 0;
+    padding: 0.6rem;
+    width: 8.8rem;
+    background-color: #DF493D;
+    transition: outline-offset 300ms ease-in-out, box-shadow 250ms ease-in-out;
+    outline: 2.5px solid #313131;
+    outline-offset: 2px;
+    border-radius: 2rem;
+    box-shadow: 6px 7px #313131;
+    color: #fff;
+    font-family: 'Public Sans', sans-serif;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    /* -webkit-text-stroke: 0.5px #000; */
+    text-shadow: -1px 0px 0 #000,
+        1px 0px 0 #000,
+        0px -1px #000,
+        0px 1px 0 #000;
+}
+
+.btn-color-2 {
+    background-color: #4173B8;
+}
+
+.btn-color-1:hover {
+    color: #fff;
+    outline: 2px solid #313131;
+    outline-offset: 0px;
+    box-shadow: none;
+    /* transform: 5px 6.5px; */
+    background-color: #DF493D;
+}
+
+.btn-color-1:active {
+    outline: 2px solid #313131;
+    outline-offset: 0px;
+    box-shadow: 4px 4px #313131 inset;
+    transition-duration: 1ms;
+    background-color: #DF493D;
+}
+
+.btn-color-2:hover {
+    color: #fff;
+    outline: 2px solid #313131;
+    outline-offset: 0px;
+    box-shadow: none;
+    transform: 5px 6.5px;
+    background-color: #4173B8;
+}
+
+.btn-color-2:active {
+    outline: 2px solid #313131;
+    outline-offset: 0px;
+    box-shadow: 4px 4px #313131 inset;
+    transition-duration: 1ms;
+    background-color: #4173B8;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ANIMATIONS */
+
+@keyframes float {
+
+    0% {
+        transform: rotate(0deg) translate(-4px) rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg) translate(-4px) rotate(-360deg);
+    }
+}
