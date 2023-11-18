@@ -2,11 +2,9 @@ var tl = gsap.timeline({
   scrollTrigger: {
     trigger: "#main",
     // markers: true,
-    // start: "50% 50%",
-    // end: "150% 50%",
-    start: "top",
-    end: "bottom",
-    scrub: 3,
+    start: "50% 50%",
+    end: "150% 50%",
+    scrub: true,
     pin: true,
   }
 });
