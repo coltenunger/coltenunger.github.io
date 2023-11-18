@@ -1,78 +1,273 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>C. U.</title>
-    <!-- Favicon -->
-    <link rel="shortcut icon" type="ico" href="/assets/images/favicon.ico">
-
-    <!-- Bootstrap -->
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"> -->
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
-    <!-- CSS Media Queries -->
-    <link rel="stylesheet" href="mediaQ.css">
-
+  <meta charset="UTF-8" />
+  <link rel="icon" type="ico" href="/assets/favicon/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Colten Unger</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/mediaQ.css">
+  <!-- ICONIFY CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/iconify/2.0.0/iconify.min.js"
+    integrity="sha512-lYMiwcB608+RcqJmP93CMe7b4i9G9QK1RbixsNu4PzMRJMsqr/bUrkXUuFzCNsRUo3IXNUr5hz98lINURv5CNA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
-    <main id="smooth-wrapper">
-        <nav>
-            <div class="logo">
-                <a href=""> <img src="./assets/svgs/logo/cu_logo.svg" alt="">
+  <main id="main">
+    <div class="outer_top">
+      <h2 class="outer_top-h2">Hello,</h2>
+    </div>
+
+    <section id="about-section">
+      <div class="about_top">
+        <h2 class="about_header">
+          I create <span>thoughtful, purposeful</span> websites.
+        </h2>
+      </div>
+
+      <section id="work-section">
+        <div class="work_top">
+          <h3 class="work_header">Projects</h3>
+          <h3 class="mobile_header-work">User-friendly.<br>Intuitive design.<br>Fluid functionality.</h3>
+          <p class="mobile_subheader-work">Some of my work...</p>
+          <p class="work_subheader"><b>Intuitive</b> interfaces. <b>Fluid</b> functionality.</p>
+        </div>
+
+        <section id="skills-section">
+          <div class="skills_top">
+            <h3 class="skills_header">Skills</h3>
+            <p class="skills_subheader">Skills that can <b>speak</b> for themselves.</p>
+            <p class="mobile_subheader-skills">Skills that can speak for themselves...</p>
+
+          </div>
+
+          <section id="contact-section">
+
+            <div class="contact_content">
+              <div class="content_wrapper">
+                <div class="text-box">
+                  <h3 class="contact_header">Contact</h3>
+                  <p class="contact_subheader">Say hello! :-)</p>
+                </div>
+
+                <form action="" class="contact_form" id="contact-form">
+
+                  <p class="contact_message" id="contact-message"></p>
+
+                  <div class="contact_group">
+                    <div class="contact_box">
+                      <input type="text" name="user_name" class="contact_input" id="name" required placeholder="Name">
+                    </div>
+
+                    <div class="contact_box">
+                      <input type="email" name="user_email" class="contact_input" id="email" required
+                        placeholder="name@example.com">
+                    </div>
+
+                    <div class="contact_box contact_area">
+                      <textarea maxlength="1000" name="user_message" id="message" class="contact_input" required
+                        placeholder="Message"></textarea>
+                      <button type="submit" class="contact_button">
+                        <span class="iconify" data-icon="iconamoon:arrow-right-1-thin" data-inline="false"></span>
+                      </button>
+                    </div>
+                  </div>
+
+                </form>
+              </div>
+
+              <div class="contact_socials">
+                <a href="https://www.linkedin.com/in/coltenunger/" target="_blank">
+                  <div class="icon_wrapper">
+                    <span class="iconify" data-icon="basil:linkedin-solid" data-inline="false"></span>
+                  </div>
                 </a>
-            </div>
-        </nav>
-        <section id="profile">
-            <div class="section__pic-container">
-                <img src="./assets/images/profile_shadow.png" alt="Colten Unger's profile picture">
-            </div>
+                <a href="https://github.com/coltenunger" target="_blank">
+                  <div class="icon_wrapper">
+                    <span id="github_icon-cntc" class="iconify" data-icon="mdi:github" data-inline="false"></span>
+                  </div>
+                </a>
+                <a href="mailto:coltenunger@gmail.com" target="_blank">
+                  <div class="icon_wrapper">
+                    <span class="iconify" data-icon="material-symbols:alternate-email" data-inline="false"></span>
+                  </div>
+                </a>
+                <a href="assets/colten_ungerCV.pdf" target="_blank">
+                  <div class="icon_wrapper">
+                    <span class="iconify" data-icon="academicons:cv" data-inline="false"></span>
+                  </div>
+                </a>
+              </div>
 
-            <div class="section__text">
-                <p class="section__text__p1">Hi, I'm</p>
-                <h1>Colten Unger</h1>
-                <p class="section__text__p2">
-                    <span class="typedjs-sub"></span>
-                </p>
-                <p class="desc">Avid lifelong learner with a passion for purposeful problem-solving and contributing to
-                    projects that enhance the lives of others.</p>
-                <div class="btn-container">
-                    <button class="btn btn-color-1"
-                        onclick="window.open('./assets/pages/colten_ungerCV.pdf')">Resume</button>
-                    <button class="btn btn-color-2"
-                        onclick="location.href='mailto:coltenunger@gmail.com'">Contact</button>
-                </div>
-                <div id="socials-container">
-                    <img class="icon" src="./assets/svgs/socials/linkedin.svg" alt="LinkedIn Icon"
-                        onclick="window.open('https://www.linkedin.com/in/coltenunger/')">
+              <p class="author">Design and construction by <a href="#"
+                  onclick="location.href='https://coltenunger.com';"><u>Colten
+                    Unger</u></a></p>
 
-                    <img class="icon" src="./assets/svgs/socials/github.svg" alt="Github Icon"
-                        onclick="window.open('https://github.com/coltenunger')">
-                </div>
             </div>
 
+          </section>
+
+          <div class="skills_bottom">
+            <div class="stack">
+              <div class="stack_item">
+                <span class="iconify" data-icon="mdi:language-html5" data-inline="false"></span>
+                <p class="title_tag-top">HTML</p>
+              </div>
+              <div class="stack_item">
+                <span class="iconify" data-icon="ci:css3" data-inline="false"></span>
+                <p class="title_tag-top">CSS</p>
+              </div>
+              <div class="stack_item">
+                <span class="iconify" data-icon="mdi:language-javascript" data-inline="false"></span>
+                <p class="title_tag-top">JavaScript</p>
+              </div>
+              <div class="stack_item">
+                <span class="iconify" data-icon="mdi:language-python" data-inline="false"></span>
+                <p class="title_tag-top">Python</p>
+              </div>
+              <div class="stack_item">
+                <span class="iconify" data-icon="akar-icons:postgresql-fill" data-inline="false"></span>
+                <p class="title_tag-top">SQL</p>
+              </div>
+              <div class="stack_item">
+                <span class="iconify" data-icon="ic:baseline-wordpress" data-inline="false"></span>
+                <p class="title_tag-top">WordPress</p>
+              </div>
+              <div class="stack_item">
+                <span class="iconify" data-icon="material-symbols:devices" data-inline="false"></span>
+                <p class="title_tag-bottom">Responsive Design</p>
+              </div>
+              <div class="stack_item">
+                <span class="iconify" data-icon="simple-icons:webflow" data-inline="false"></span>
+                <p class="title_tag-bottom">Webflow</p>
+              </div>
+              <div class="stack_item">
+                <span class="iconify" data-icon="ph:figma-logo" data-inline="false"></span>
+                <p class="title_tag-bottom">Figma</p>
+              </div>
+              <div class="stack_item">
+                <span class="iconify" data-icon="mdi:aws" data-inline="false"></span>
+                <p class="title_tag-bottom">AWS</p>
+              </div>
+              <div class="stack_item">
+                <span class="iconify" data-icon="mdi:microsoft-azure" data-inline="false"></span>
+                <p class="title_tag-bottom">Azure</p>
+              </div>
+              <div class="stack_item">
+                <span class="iconify" data-icon="mdi:nodejs" data-inline="false"></span>
+                <p class="title_tag-bottom">Node.js</p>
+              </div>
+            </div>
+          </div>
         </section>
-    </main>
 
+        <div class="work_bottom">
+          <div class="card_wrapper-outer">
 
+            <div class="card_wrapper-inner">
+              <div class="title_header-wrapper">
+                <div class="title_header">BenderWorks</div>
+                <div class="number_plate">—001</div>
+              </div>
+              <a class="card-1" href="https://benderworks.webflow.io/" target="_blank">
+                <div class="work_card work_bg-1">
+                  <div class="mobile-title_header">BenderWorks</div>
+                  <img src="assets/project-logos/bw-logo.svg" alt="">
+                  <div class="arrow">
+                    <span class="iconify" data-icon="iconamoon:arrow-top-right-1-thin" data-inline="false"></span>
+                  </div>
+                </div>
+              </a>
+            </div>
 
+            <div class="card_wrapper-inner">
+              <div class="title_header-wrapper">
+                <div class="title_header">Unger Builders</div>
+                <div class="number_plate">—002</div>
+              </div>
+              <a class="card-2" href="https://ungerbuilders.com/" target="_blank">
+                <div class="work_card work_bg-2">
+                  <div class="mobile-title_header">Unger Builders</div>
+                  <img src="assets/project-logos/ub-logo.svg" alt="">
+                  <div class="arrow">
+                    <span class="iconify" data-icon="iconamoon:arrow-top-right-1-thin" data-inline="false"></span>
+                  </div>
+                </div>
+              </a>
+            </div>
 
+            <div class="card_wrapper-inner">
+              <div class="title_header-wrapper">
+                <div class="title_header">Asher Pope</div>
+                <div class="number_plate">—003</div>
+              </div>
 
+              <a class="card-3" href="https://www.asherpope.com/" target="_blank">
+                <div class="work_card work_bg-3">
+                  <div class="mobile-title_header">Asher Pope</div>
+                  <img src="assets/project-logos/ap-logo.svg" alt="">
+                  <div class="arrow">
+                    <span class="iconify" data-icon="iconamoon:arrow-top-right-1-thin" data-inline="false"></span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
 
-    <!-- SMOOTH SCROLL CDN -->
-    <script src="https://min30327.github.io/luxy.js/dist/js/luxy.js"></script>
-    <!-- Typed.js CDN script -->
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-    <!-- Javascript -->
-    <script defer src="script.js"></script>
-    <!-- Bootstrap -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-        crossorigin="anonymous"></script> -->
+        </div>
+      </section>
+
+      <div class="about_bottom">
+        <p class="about_subheader"> I'm passionate about creating unique web
+          experiences with simple sleek designs.</p>
+        <div class="about_socials">
+          <a href="https://www.linkedin.com/in/coltenunger/" target="_blank">
+            <div class="icon_wrapper">
+              <span class="iconify" data-icon="basil:linkedin-solid" data-inline="false"></span>
+            </div>
+          </a>
+          <a href="https://github.com/coltenunger" target="_blank">
+            <div class="icon_wrapper">
+              <span id="github_icon-abt" class="iconify" data-icon="mdi:github" data-inline="false"></span>
+            </div>
+          </a>
+          <a href="mailto:coltenunger@gmail.com" target="_blank">
+            <div class="icon_wrapper">
+              <span class="iconify" data-icon="material-symbols:alternate-email" data-inline="false"></span>
+            </div>
+          </a>
+          <a href="assets/colten_ungerCV.pdf" target="_blank">
+            <div class="icon_wrapper">
+              <span class="iconify" data-icon="academicons:cv" data-inline="false"></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="outer_bottom">
+      <h1 class="outer_bottom-h1">I’m Colten.</h1>
+      <h4 class="outer_bottom-h4">Front-End Developer</h4>
+    </div>
+  </main>
+
+  <!-- GSAP CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <!-- LENIS CDN -->
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
+  <!-- EMAILjs CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <!-- GSAP JS -->
+  <script type="module" src="/scripts/gsap.js"></script>
+  <!-- LENIS JS -->
+  <script type="module" src="/scripts/lenis.js"></script>
+  <!-- EMAIL JS -->
+  <script type="module" src="/scripts/email.js"></script>
 </body>
 
 </html>
