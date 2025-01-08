@@ -12,21 +12,6 @@ Promise.all([
       document.getElementById("nav-footer").innerHTML = data;
     }),
 ]).then(() => {
-  // REVEAL SCROLL INDICATOR AT BOTTOM
-  // window.addEventListener("scroll", function () {
-  //   const scrollIndicator = document.getElementById("scroll-indicator");
-
-  //   // Check if the user has reached the bottom of the page
-  //   if (
-  //     window.scrollY + window.innerHeight >=
-  //     document.documentElement.scrollHeight
-  //   ) {
-  //     scrollIndicator.style.opacity = "1"; // Reveal the scroll indicator
-  //   } else {
-  //     scrollIndicator.style.opacity = "0"; // Keep it hidden
-  //   }
-  // });
-
   // SCROLL TO TOP ON "BACK TO TOP" CLICK
   document
     .getElementById("scroll-indicator")
@@ -45,39 +30,39 @@ Promise.all([
   const welcomeMessage = document.getElementById("welcome-message");
   const projectSections = [
     {
-      section: document.getElementById("project-1-card"),
+      section: document.getElementById("project01"),
       navLink: document.getElementById("project-1-navlink"),
     },
     {
-      section: document.getElementById("project-2-card"),
+      section: document.getElementById("project02"),
       navLink: document.getElementById("project-2-navlink"),
     },
     {
-      section: document.getElementById("project-3-card"),
+      section: document.getElementById("project03"),
       navLink: document.getElementById("project-3-navlink"),
     },
     {
-      section: document.getElementById("project-4-card"),
+      section: document.getElementById("project04"),
       navLink: document.getElementById("project-4-navlink"),
     },
     {
-      section: document.getElementById("project-5-card"),
+      section: document.getElementById("project05"),
       navLink: document.getElementById("project-5-navlink"),
     },
     {
-      section: document.getElementById("project-6-card"),
+      section: document.getElementById("project06"),
       navLink: document.getElementById("project-6-navlink"),
     },
     {
-      section: document.getElementById("project-7-card"),
+      section: document.getElementById("project07"),
       navLink: document.getElementById("project-7-navlink"),
     },
     {
-      section: document.getElementById("project-8-card"),
+      section: document.getElementById("project08"),
       navLink: document.getElementById("project-8-navlink"),
     },
     {
-      section: document.getElementById("project-9-card"),
+      section: document.getElementById("project09"),
       navLink: document.getElementById("project-9-navlink"),
     },
   ];
@@ -149,4 +134,29 @@ Promise.all([
   // Observe the relevant sections
   observer.observe(welcomeMessage);
   projectSections.forEach((project) => observer.observe(project.section));
+
+  //
+
+  // MODAL HANDELING
+  const modal = document.getElementById("mobile-modal");
+  const moreInfo = document.getElementById("more-info-btn");
+  const closeButton = document.getElementById("close-btn");
+
+  // Show the modal when the "More Info" link is clicked
+  moreInfo.addEventListener("click", (event) => {
+    event.preventDefault(); // Prevent default anchor behavior
+    modal.style.display = "flex"; // Display the modal
+  });
+
+  // Close the modal when the close button is clicked
+  closeButton.addEventListener("click", () => {
+    modal.style.display = "none"; // Hide the modal
+  });
+
+  // Close the modal when clicking outside the modal content
+  window.addEventListener("click", (event) => {
+    if (event.target === modal) {
+      modal.style.display = "none"; // Hide the modal
+    }
+  });
 });
