@@ -12,20 +12,20 @@ Promise.all([
       document.getElementById("nav-footer").innerHTML = data;
     }),
 ]).then(() => {
-  // REVEAL SCROLL INDICATOR
-  window.addEventListener("scroll", function () {
-    const scrollIndicator = document.getElementById("scroll-indicator");
+  // REVEAL SCROLL INDICATOR AT BOTTOM
+  // window.addEventListener("scroll", function () {
+  //   const scrollIndicator = document.getElementById("scroll-indicator");
 
-    // Check if the user has reached the bottom of the page
-    if (
-      window.scrollY + window.innerHeight >=
-      document.documentElement.scrollHeight
-    ) {
-      scrollIndicator.style.opacity = "1"; // Reveal the scroll indicator
-    } else {
-      scrollIndicator.style.opacity = "0"; // Keep it hidden
-    }
-  });
+  //   // Check if the user has reached the bottom of the page
+  //   if (
+  //     window.scrollY + window.innerHeight >=
+  //     document.documentElement.scrollHeight
+  //   ) {
+  //     scrollIndicator.style.opacity = "1"; // Reveal the scroll indicator
+  //   } else {
+  //     scrollIndicator.style.opacity = "0"; // Keep it hidden
+  //   }
+  // });
 
   // SCROLL TO TOP ON "BACK TO TOP" CLICK
   document
@@ -100,11 +100,11 @@ Promise.all([
         if (project.section.id === sectionID) {
           navLink.classList.remove("strikethrough");
           navLink.classList.add("underline");
-          navLink.style.opacity = "1";
+          navLink.classList.add("active-navlink");
         } else {
           navLink.classList.remove("underline");
           navLink.classList.add("strikethrough");
-          navLink.style.opacity = "0.5";
+          navLink.classList.remove("active-navlink");
         }
       }
     });
@@ -117,7 +117,7 @@ Promise.all([
       if (navLink) {
         navLink.classList.remove("underline");
         navLink.classList.add("strikethrough");
-        navLink.style.opacity = "0.5";
+        navLink.classList.remove("active-navlink");
       }
     });
   }
@@ -150,34 +150,3 @@ Promise.all([
   observer.observe(welcomeMessage);
   projectSections.forEach((project) => observer.observe(project.section));
 });
-
-//
-
-// LUXY SMOOTH SCROLL
-// var isMobile = /iPhone|iPad|Android/i.test(navigator.userAgent);
-// if (!isMobile) {
-//   luxy.init({
-//     wrapper: "#luxy",
-//     wrapperSpeed: 0.065,
-//   });
-// }
-
-// PREVENT LUXY DEFAULT BEHAVIOR FOR ANCHOR TAG SCROLLING
-// document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-//   anchor.addEventListener("click", function (e) {
-//     e.preventDefault(); // Prevent default anchor behavior
-
-//     const targetID = this.getAttribute("href").substring(1); // Get the target ID without '#'
-//     const targetElement = document.getElementById(targetID);
-
-//     if (targetElement) {
-//       const offsetTop =
-//         targetElement.getBoundingClientRect().top + window.scrollY;
-
-//       window.scrollTo({
-//         top: offsetTop,
-//         behavior: "smooth", // Smooth scroll to the section
-//       });
-//     }
-//   });
-// });

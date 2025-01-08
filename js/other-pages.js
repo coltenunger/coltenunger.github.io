@@ -104,11 +104,11 @@ Promise.all([
         if (project.section.id === sectionID) {
           navLink.classList.remove("strikethrough");
           navLink.classList.add("underline");
-          navLink.style.opacity = "1";
+          navLink.classList.add("active-navlink");
         } else {
           navLink.classList.remove("underline");
           navLink.classList.add("strikethrough");
-          navLink.style.opacity = "0.5";
+          navLink.classList.remove("active-navlink");
         }
       }
     });
@@ -121,7 +121,7 @@ Promise.all([
       if (navLink) {
         navLink.classList.remove("underline");
         navLink.classList.add("strikethrough");
-        navLink.style.opacity = "0.5";
+        navLink.classList.remove("active-navlink");
       }
     });
   }

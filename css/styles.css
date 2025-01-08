@@ -1,21 +1,26 @@
 @font-face {
   font-family: "OTNeueMontreal-MediumSqueezed";
-  src: url("../fonts/OTNeueMontreal-MediumSqueezed.otf") format("otf");
+  src: url("/assets/fonts/OTNeueMontreal-MediumSqueezed.otf") format("otf");
   font-weight: 500;
 }
 
 html {
   font-size: 10px;
-  scroll-behavior: smooth;
 }
 
 body {
+  cursor: url("/assets/windows-95-98-arrow.cur"), auto;
   background-color: white;
   color: black;
   overflow-x: hidden;
+  padding: 0;
   margin: 1rem;
   font-family: "OTNeueMontreal-MediumSqueezed", "Times New Roman", serif;
   font-size: 1.6rem;
+}
+
+a {
+  cursor: url("/assets/windows-95-98-pointer.cur"), pointer;
 }
 
 .h1 {
@@ -60,13 +65,11 @@ body {
 }
 
 #scroll-indicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1rem;
   cursor: pointer;
-  position: fixed;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0;
-  transition: opacity 0.3s ease;
 }
 
 .top-left {
@@ -94,8 +97,8 @@ body {
   flex-direction: column;
   align-items: flex-start;
 
-  /* filter: invert(); */
-  /* mix-blend-mode: difference; */
+  filter: invert();
+  mix-blend-mode: difference;
 }
 
 #project-1-navlink,
@@ -110,6 +113,10 @@ body {
   opacity: 0.5;
 }
 
+.active-navlink {
+  opacity: 1 !important;
+}
+
 #project-1-navlink:hover,
 #project-2-navlink:hover,
 #project-3-navlink:hover,
@@ -119,9 +126,8 @@ body {
 #project-7-navlink:hover,
 #project-8-navlink:hover,
 #project-9-navlink:hover {
-  opacity: 1;
+  opacity: 1 !important;
   text-decoration: none;
-  /* transition: opacity 0.3s ease; */
 }
 
 section {
@@ -182,8 +188,8 @@ section {
   gap: 36px;
   width: 200px;
   position: absolute;
-  left: 10px;
   /* left: 0; */
+  left: 10px;
   top: 50%;
   transform: translateY(-50%);
   opacity: 0;
@@ -199,7 +205,7 @@ section {
 .container {
   display: flex;
   flex-direction: column;
-  /* gap: 0.5rem; */
+  gap: 1rem;
 }
 
 .bio-container {
@@ -207,17 +213,41 @@ section {
   justify-content: center;
   align-items: left;
   flex-direction: column;
-  width: 377px;
+  width: 415px;
 }
 
 .pdf-container {
   width: 400px;
   height: 523px;
-  background-color: #020183;
+  background-color: #0000a5;
   box-shadow: 8px 8px 20.1px 6px rgba(0, 0, 0, 0.49);
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#work-navlink:hover {
+  text-decoration: none;
+}
+
+#work-navlink:active {
+  text-decoration: underline;
+}
+
+#info-navlink:hover {
+  text-decoration: none;
+}
+
+#info-navlink:active {
+  text-decoration: underline;
+}
+
+#resume-navlink:hover {
+  text-decoration: none;
+}
+
+#resume-navlink:active {
+  text-decoration: underline;
 }
 
 /* MEDIA QUERIES | mobile devices and tablet */
