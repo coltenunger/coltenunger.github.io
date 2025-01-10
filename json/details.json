@@ -1,47 +1,47 @@
 [
   {
     "publish_year_01": "2024",
-    "category_01": "Category—Design, Web development",
-    "description_01": "A Webflow website for a tech startup based in Columbia, SC. Complete brand identity and responsive layouts created in Figma. Currently in staging phase pending content finalization."
+    "category_01": "Category—Design, Web Development",
+    "description_01": "A Webflow website for a tech startup based in Columbia, SC showcasing their expertise in software/hardware Development and video production. Complete brand identity and responsive layouts created in Figma. Currently in staging phase pending content finalization."
   },
   {
     "publish_year_02": "2024",
-    "category_02": "Category—Design, Web development",
+    "category_02": "Category—Design, Web Development",
     "description_02": "A portfolio website for a multimedia artist, built with Squarespace to showcase photography and DJ work. Clean, responsive galleries designed to complement the artist's aesthetic."
   },
   {
     "publish_year_03": "2023",
-    "category_03": "Category—E-commerce Design, Web development",
+    "category_03": "Category—E-commerce Design, Web Development",
     "description_03": "A luxury e-commerce platform for an Italian leather goods retailer, built with Shopify and custom Liquid code. Responsive UI/UX designed in Figma along with unique brand identity and bespoke logotype."
   },
   {
     "publish_year_04": "2023",
-    "category_04": "Category—Design, Web development",
+    "category_04": "Category—Design, Web Development",
     "description_04": "A modern portfolio platform for an industrial design studio based in Sacramento, CA. Built with Webflow to showcase product design and CAD work. Clean, responsive interface designed in Figma. Currently in staging phase."
   },
   {
     "publish_year_05": "2024",
-    "category_05": "Category—Software development, AI integration",
-    "description_05": "A proprietary full-stack web app that proofreads large manuscript against company-specific style guides, built with Python, Flask, and LLM integration. GitHub repository available upon request."
+    "category_05": "Category—Software Development, AI Integration",
+    "description_05": "A proprietary full-stack web app that proofreads large manuscript against company-specific style guides, built with Python, Flask, and LLM APIs. GitHub repository available upon request."
   },
   {
     "publish_year_06": "2024",
-    "category_06": "Category—Design, Web development",
+    "category_06": "Category—Design, Web Development",
     "description_06": "A multilingual website for a full-service law firm. Full migration from Squarespace to Webflow while preserving SEO rankings and existing content. Fresh UI/UX design with Figma. Currently in staging phase awaiting content population."
   },
   {
     "publish_year_07": "2022",
-    "category_07": "Category—Web development, Performance optimization",
+    "category_07": "Category—Web Development, Performance Optimization",
     "description_07": "A media-rich site for a construction company to showcase their remodeling work. Built with WordPress. Custom caching solutions and image optimization implemented for enhanced performance."
   },
   {
     "publish_year_08": "2021",
-    "category_08": "Category—Design, Full-stack web development",
+    "category_08": "Category—Design, Full-stack Web Development",
     "description_08": "A personal music blog designed with Figma and built with Node.js and EJS templating. Features custom database architecture for album reviews with advanced search and rating algorithms."
   },
   {
     "publish_year_09": "2020",
-    "category_09": "Category—UI/UX design, Web development",
+    "category_09": "Category—UI/UX Design, Web Development",
     "description_09": "A visually-focused weather application built with JavaScript and OpenWeather API. Clean, responsive interface designed in Figma for elegant weather tracking."
   }
 ]

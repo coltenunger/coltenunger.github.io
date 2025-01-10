@@ -226,7 +226,7 @@ section {
 }
 
 .project-8-color {
-  background-color: #d3d1b9;
+  background-color: #ffdcbd;
 }
 
 .project-9-color {
@@ -237,9 +237,9 @@ section {
   display: flex;
   flex-direction: column;
   gap: 36px;
-  width: 280px;
+  width: 300px;
   position: absolute;
-  /*left: 10px; */
+  /* left: 10px; */
   left: 0;
   top: 50%;
   transform: translateY(-50%);
@@ -387,21 +387,6 @@ section {
   .card {
     width: 259px;
     height: 315px;
-  }
-
-  .more-info {
-    display: flex;
-    flex-direction: column;
-    gap: 36px;
-    width: 200px;
-    position: absolute;
-    /* left: 10px; */
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
   }
 
   #anchor-wrapper:hover + .more-info {
