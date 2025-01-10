@@ -22,6 +22,85 @@ Promise.all([
       });
     });
 
+  // LOAD JSON CONTENT
+  fetch("json/details.json")
+    .then((response) => response.json())
+    .then((details) => {
+      const project01 = details[0];
+      const project02 = details[1];
+      const project03 = details[2];
+      const project04 = details[3];
+      const project05 = details[4];
+      const project06 = details[5];
+      const project07 = details[6];
+      const project08 = details[7];
+      const project09 = details[8];
+
+      document.getElementById("publish-year-01").textContent =
+        project01.publish_year_01;
+      document.getElementById("category-01").textContent =
+        project01.category_01;
+      document.getElementById("description-01").textContent =
+        project01.description_01;
+
+      document.getElementById("publish-year-02").textContent =
+        project02.publish_year_02;
+      document.getElementById("category-02").textContent =
+        project02.category_02;
+      document.getElementById("description-02").textContent =
+        project02.description_02;
+
+      document.getElementById("publish-year-03").textContent =
+        project03.publish_year_03;
+      document.getElementById("category-03").textContent =
+        project03.category_03;
+      document.getElementById("description-03").textContent =
+        project03.description_03;
+
+      document.getElementById("publish-year-04").textContent =
+        project04.publish_year_04;
+      document.getElementById("category-04").textContent =
+        project04.category_04;
+      document.getElementById("description-04").textContent =
+        project04.description_04;
+
+      document.getElementById("publish-year-05").textContent =
+        project05.publish_year_05;
+      document.getElementById("category-05").textContent =
+        project05.category_05;
+      document.getElementById("description-05").textContent =
+        project05.description_05;
+
+      document.getElementById("publish-year-06").textContent =
+        project06.publish_year_06;
+      document.getElementById("category-06").textContent =
+        project06.category_06;
+      document.getElementById("description-06").textContent =
+        project06.description_06;
+
+      document.getElementById("publish-year-07").textContent =
+        project07.publish_year_07;
+      document.getElementById("category-07").textContent =
+        project07.category_07;
+      document.getElementById("description-07").textContent =
+        project07.description_07;
+
+      document.getElementById("publish-year-08").textContent =
+        project08.publish_year_08;
+      document.getElementById("category-08").textContent =
+        project08.category_08;
+      document.getElementById("description-08").textContent =
+        project08.description_08;
+
+      document.getElementById("publish-year-09").textContent =
+        project09.publish_year_09;
+      document.getElementById("category-09").textContent =
+        project09.category_09;
+      document.getElementById("description-09").textContent =
+        project09.description_09;
+    })
+    .catch((error) => console.error("Error loading JSON:", error));
+
   // TOGGLE NAV LINK STYLES BASED ON SECTION VISIBILITY.
   // Grab the Work link and Project nav links
   const workNavLink = document.getElementById("work-navlink");

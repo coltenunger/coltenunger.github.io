@@ -137,24 +137,19 @@ section {
   display: flex;
 }
 
-/* NEW CLASSES START */
-
 .card-wrapper {
   display: flex;
   flex-direction: column;
   align-items: end;
 }
 
-.more-info-btn {
-  margin-top: 0.5rem;
-}
-
-/* MODAL */
+/* MODAL START */
 
 .mobile-modal {
-  display: flex;
-  /* display: none; */
+  font-size: 0.8rem; /* test on phone and delete if body font-size is suitable */
   position: fixed;
+  display: none;
+  visibility: visible;
   top: 0;
   left: 0;
   width: 100%;
@@ -166,13 +161,20 @@ section {
   z-index: 1000;
 }
 
+.more-info-modal {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  padding-bottom: 3rem;
+}
+
 .modal-content {
   background: white;
-  padding: 20px;
+  padding: 1rem;
   box-shadow: 8px 8px 20.1px 6px rgba(0, 0, 0, 0.49);
   text-align: left;
-  width: 300px;
-  max-width: 90%; /* Ensure it looks good on smaller screens */
+  width: 200px;
+  /* max-width: 90%; Ensure it looks good on smaller screens */
 }
 
 .close-btn {
@@ -184,11 +186,10 @@ section {
   text-decoration: underline;
 }
 
-/* MODAL */
-
-/* NEW CLASSES END */
+/* MODAL END */
 
 .card {
+  text-transform: capitalize;
   width: 695px;
   height: 417px;
   display: flex;
@@ -197,15 +198,15 @@ section {
 }
 
 .project-1-color {
-  background-color: #fffbef;
-}
-
-.project-2-color {
   background-color: #d8d8d8;
 }
 
-.project-3-color {
+.project-2-color {
   background-color: #f3b9f8;
+}
+
+.project-3-color {
+  background-color: #fffbef;
 }
 
 .project-4-color {
@@ -213,15 +214,15 @@ section {
 }
 
 .project-5-color {
-  background-color: #236a98;
+  background-color: #409dd7;
 }
 
 .project-6-color {
-  background-color: #003e7e;
+  background-color: #236a98;
 }
 
 .project-7-color {
-  background-color: #409dd7;
+  background-color: #003e7e;
 }
 
 .project-8-color {
@@ -236,9 +237,9 @@ section {
   display: flex;
   flex-direction: column;
   gap: 36px;
-  width: 200px;
+  width: 280px;
   position: absolute;
-  /* left: 10px; */
+  /*left: 10px; */
   left: 0;
   top: 50%;
   transform: translateY(-50%);
@@ -250,6 +251,18 @@ section {
 #anchor-wrapper:hover + .more-info {
   opacity: 1;
   visibility: visible;
+}
+
+.more-info-btn {
+  display: none;
+  visibility: hidden;
+  margin-top: 0.5rem;
+
+  font-size: 0.8rem; /* delete this if it is too small for mobile and let it inherit the body font size */
+}
+
+.more-info-btn:hover {
+  text-decoration: underline;
 }
 
 .container {
@@ -369,45 +382,11 @@ section {
     display: flex;
   }
 
+  /* CONTINUE HERE  */
+
   .card {
     width: 259px;
     height: 315px;
-  }
-
-  .project-1-color {
-    background-color: #fffbef;
-  }
-
-  .project-2-color {
-    background-color: #d8d8d8;
-  }
-
-  .project-3-color {
-    background-color: #f3b9f8;
-  }
-
-  .project-4-color {
-    background-color: #151515;
-  }
-
-  .project-5-color {
-    background-color: #236a98;
-  }
-
-  .project-6-color {
-    background-color: #003e7e;
-  }
-
-  .project-7-color {
-    background-color: #409dd7;
-  }
-
-  .project-8-color {
-    background-color: #d3d1b9;
-  }
-
-  .project-9-color {
-    background-color: #6793f4;
   }
 
   .more-info {
@@ -426,8 +405,14 @@ section {
   }
 
   #anchor-wrapper:hover + .more-info {
-    opacity: 1;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .more-info-btn {
+    display: flex;
     visibility: visible;
+    margin-top: 0.5rem;
   }
 
   .container {
