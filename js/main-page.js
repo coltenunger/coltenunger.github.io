@@ -22,7 +22,7 @@ Promise.all([
       });
     });
 
-  // LOAD JSON CONTENT
+  // LOAD JSON CONTENT FOR BOTH DESKTOP CARDS AND MOBILE MODALS
   fetch("json/details.json")
     .then((response) => response.json())
     .then((details) => {
@@ -41,6 +41,12 @@ Promise.all([
       document.getElementById("category-01").textContent =
         project01.category_01;
       document.getElementById("description-01").textContent =
+        project01.description_01;
+      document.getElementById("modal-publish-year-01").textContent =
+        project01.publish_year_01;
+      document.getElementById("modal-category-01").textContent =
+        project01.category_01;
+      document.getElementById("modal-description-01").textContent =
         project01.description_01;
 
       document.getElementById("publish-year-02").textContent =
@@ -218,13 +224,15 @@ Promise.all([
 
   // MODAL HANDELING
   const modal = document.getElementById("mobile-modal");
-  const moreInfo = document.getElementById("more-info-btn");
+  const moreInfoButton = document.querySelectorAll(".more-info-button");
   const closeButton = document.getElementById("close-btn");
 
   // Show the modal when the "More Info" link is clicked
-  moreInfo.addEventListener("click", (event) => {
-    event.preventDefault(); // Prevent default anchor behavior
-    modal.style.display = "flex"; // Display the modal
+  moreInfoButton.forEach((moreInfoButton) => {
+    moreInfoButton.addEventListener("click", (event) => {
+      event.preventDefault(); // Prevent default behavior if applicable
+      modal.style.display = "flex"; // Display the modal
+    });
   });
 
   // Close the modal when the close button is clicked
