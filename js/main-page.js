@@ -22,88 +22,43 @@ Promise.all([
       });
     });
 
+  // Store projects data globally
+  let projectsData = [];
+
   // LOAD JSON CONTENT FOR BOTH DESKTOP CARDS AND MOBILE MODALS
   fetch("json/details.json")
     .then((response) => response.json())
     .then((details) => {
-      const project01 = details[0];
-      const project02 = details[1];
-      const project03 = details[2];
-      const project04 = details[3];
-      const project05 = details[4];
-      const project06 = details[5];
-      const project07 = details[6];
-      const project08 = details[7];
-      const project09 = details[8];
+      projectsData = details; // Store the data globally
 
-      document.getElementById("publish-year-01").textContent =
-        project01.publish_year_01;
-      document.getElementById("category-01").textContent =
-        project01.category_01;
-      document.getElementById("description-01").textContent =
-        project01.description_01;
-      document.getElementById("modal-publish-year-01").textContent =
-        project01.publish_year_01;
-      document.getElementById("modal-category-01").textContent =
-        project01.category_01;
-      document.getElementById("modal-description-01").textContent =
-        project01.description_01;
+      // Populate all modal code blocks
+      details.forEach((project, index) => {
+        const projectNum = String(index + 1).padStart(2, "0");
 
-      document.getElementById("publish-year-02").textContent =
-        project02.publish_year_02;
-      document.getElementById("category-02").textContent =
-        project02.category_02;
-      document.getElementById("description-02").textContent =
-        project02.description_02;
+        // Set content for modal code blocks
+        const publishYearElement = document.getElementById(
+          `publish-year-${projectNum}`
+        );
+        if (publishYearElement) {
+          publishYearElement.textContent =
+            project[`publish_year_${projectNum}`];
+        }
 
-      document.getElementById("publish-year-03").textContent =
-        project03.publish_year_03;
-      document.getElementById("category-03").textContent =
-        project03.category_03;
-      document.getElementById("description-03").textContent =
-        project03.description_03;
+        const categoryElement = document.getElementById(
+          `category-${projectNum}`
+        );
 
-      document.getElementById("publish-year-04").textContent =
-        project04.publish_year_04;
-      document.getElementById("category-04").textContent =
-        project04.category_04;
-      document.getElementById("description-04").textContent =
-        project04.description_04;
+        if (categoryElement) {
+          categoryElement.textContent = project[`category_${projectNum}`];
+        }
+        const descriptionElement = document.getElementById(
+          `description-${projectNum}`
+        );
 
-      document.getElementById("publish-year-05").textContent =
-        project05.publish_year_05;
-      document.getElementById("category-05").textContent =
-        project05.category_05;
-      document.getElementById("description-05").textContent =
-        project05.description_05;
-
-      document.getElementById("publish-year-06").textContent =
-        project06.publish_year_06;
-      document.getElementById("category-06").textContent =
-        project06.category_06;
-      document.getElementById("description-06").textContent =
-        project06.description_06;
-
-      document.getElementById("publish-year-07").textContent =
-        project07.publish_year_07;
-      document.getElementById("category-07").textContent =
-        project07.category_07;
-      document.getElementById("description-07").textContent =
-        project07.description_07;
-
-      document.getElementById("publish-year-08").textContent =
-        project08.publish_year_08;
-      document.getElementById("category-08").textContent =
-        project08.category_08;
-      document.getElementById("description-08").textContent =
-        project08.description_08;
-
-      document.getElementById("publish-year-09").textContent =
-        project09.publish_year_09;
-      document.getElementById("category-09").textContent =
-        project09.category_09;
-      document.getElementById("description-09").textContent =
-        project09.description_09;
+        if (descriptionElement) {
+          descriptionElement.textContent = project[`description_${projectNum}`];
+        }
+      });
     })
     .catch((error) => console.error("Error loading JSON:", error));
 
@@ -220,30 +175,44 @@ Promise.all([
   observer.observe(welcomeMessage);
   projectSections.forEach((project) => observer.observe(project.section));
 
-  //
-
-  // MODAL HANDELING
+  // MODAL HANDLING
   const modal = document.getElementById("mobile-modal");
-  const moreInfoButton = document.querySelectorAll(".more-info-button");
+  const moreInfoButtons = document.querySelectorAll(".more-info-button");
   const closeButton = document.getElementById("close-btn");
 
+  // Function to update modal content
+  function updateModalContent(projectNum) {
+    const project = projectsData[parseInt(projectNum) - 1];
+
+    document.getElementById("modal-publish-year-01").textContent =
+      project[`publish_year_${projectNum}`];
+    document.getElementById("modal-category-01").textContent =
+      project[`category_${projectNum}`];
+    document.getElementById("modal-description-01").textContent =
+      project[`description_${projectNum}`];
+  }
+
   // Show the modal when the "More Info" link is clicked
-  moreInfoButton.forEach((moreInfoButton) => {
-    moreInfoButton.addEventListener("click", (event) => {
-      event.preventDefault(); // Prevent default behavior if applicable
-      modal.style.display = "flex"; // Display the modal
+  moreInfoButtons.forEach((button) => {
+    button.addEventListener("click", (event) => {
+      event.preventDefault();
+      // Get the project number from the parent section's ID
+      const parentSection = button.closest("section");
+      const projectNum = parentSection.id.replace("project", "");
+      updateModalContent(projectNum);
+      modal.style.display = "flex";
     });
   });
 
   // Close the modal when the close button is clicked
   closeButton.addEventListener("click", () => {
-    modal.style.display = "none"; // Hide the modal
+    modal.style.display = "none";
   });
 
   // Close the modal when clicking outside the modal content
   window.addEventListener("click", (event) => {
     if (event.target === modal) {
-      modal.style.display = "none"; // Hide the modal
+      modal.style.display = "none";
     }
   });
 });
