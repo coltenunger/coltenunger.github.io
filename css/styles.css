@@ -14,7 +14,8 @@ body {
   color: black;
   overflow-x: hidden;
   padding: 0;
-  margin: 1rem;
+  /* margin: 1rem; */
+  margin: 0;
   font-family: "OTNeueMontreal-MediumSqueezed", "Times New Roman", serif;
   font-size: 1.6rem;
 }
@@ -68,7 +69,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* padding-bottom: 1rem; */
+  margin-bottom: 1rem;
 }
 
 .top-left {
@@ -87,17 +88,15 @@ a {
 }
 
 .bottom-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   position: fixed;
   bottom: 10px;
   left: 10px;
   z-index: 1;
-
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-
-  /* filter: invert(); */
-  /* mix-blend-mode: difference; */
+  filter: invert();
+  mix-blend-mode: difference;
 }
 
 #project-1-navlink,
@@ -243,8 +242,8 @@ section {
   gap: 36px;
   width: 300px;
   position: absolute;
-  /* left: 10px; */
-  left: 0;
+  left: 10px;
+  /* left: 0; */
   top: 50%;
   transform: translateY(-50%);
   opacity: 0;
@@ -275,12 +274,19 @@ section {
   gap: 0.1rem;
 }
 
+.bio-alignment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 .bio-container {
   display: flex;
   justify-content: center;
-  align-items: left;
+  text-align: left;
   flex-direction: column;
-  width: 415px;
+  width: 400px;
 }
 
 .pdf-container {
@@ -291,6 +297,12 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pdf-container:hover {
+  transform: translate(-5px, -5px); /* Move up slighty up (-Y) and left (-X) */
+  box-shadow: 8px 8px 30.1px 8px rgba(0, 0, 0, 0.39);
 }
 
 #work-navlink:hover {
@@ -371,6 +383,11 @@ section {
     margin-top: 0.5rem;
   }
 
+  .bio-alignment {
+    justify-content: left;
+    margin-left: 1rem;
+  }
+
   .bio-container {
     width: 336px;
   }
@@ -378,6 +395,11 @@ section {
   .pdf-container {
     width: 255px;
     height: 333px;
+  }
+
+  .pdf-container {
+    transform: none;
+    box-shadow: inherit;
   }
 }
 
