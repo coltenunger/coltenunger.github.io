@@ -346,6 +346,11 @@ section {
   .more-info {
     width: 240px;
   }
+
+  .pdf-container {
+    width: 355px;
+    height: 464.16px;
+  }
 }
 
 /* MEDIA QUERIES | mobile devices and tablet */
