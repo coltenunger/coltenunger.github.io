@@ -175,7 +175,7 @@ section {
 .modal-content {
   background: white;
   padding: 1rem;
-  box-shadow: 8px 8px 20.1px 6px rgba(0, 0, 0, 0.49);
+  box-shadow: 8px 8px 20.1px 2px rgba(0, 0, 0, 0.39);
   text-align: left;
   width: 200px;
   /* max-width: 90%; Ensure it looks good on smaller screens */
