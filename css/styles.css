@@ -145,7 +145,8 @@ section {
 /* MODAL START */
 
 .mobile-modal {
-  font-size: 0.8rem; /* test on phone and delete if body font-size is suitable */
+  font-size: 10px;
+  /* font-size: 0.8rem; test on phone and delete if body font-size is suitable */
   position: fixed;
   display: none;
   visibility: hidden;
@@ -264,8 +265,8 @@ section {
   display: none;
   visibility: hidden;
   margin-top: 0.5rem;
-
-  font-size: 0.8rem; /* delete this if it is too small for mobile and let it inherit the body font size */
+  font-size: 10px;
+  /* font-size: 0.8rem; delete this if it is too small for mobile and let it inherit the body font size */
 }
 
 .more-info-btn:hover {
@@ -333,6 +334,7 @@ section {
   text-decoration: underline;
 }
 
+/* MEDIA QUERIES | SMALLER DESKTOP */
 @media (max-width: 1320px) {
   .h1 {
     font-size: 4.5rem;
@@ -353,7 +355,7 @@ section {
   }
 }
 
-/* MEDIA QUERIES | mobile devices and tablet */
+/* MEDIA QUERIES | MOBILE AND TABLET */
 @media (max-width: 768px) and (max-width: 1024px) {
   body {
     font-size: 1.4rem; /* maybe make this 1rem? */
@@ -404,7 +406,6 @@ section {
   .more-info-btn {
     display: flex;
     visibility: visible;
-    margin-top: 0.5rem;
   }
 
   .bio-alignment {
