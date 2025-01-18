@@ -1,7 +1,11 @@
 @font-face {
   font-family: "OTNeueMontreal-MediumSqueezed";
-  src: url("/assets/fonts/OTNeueMontreal-MediumSqueezed.otf") format("otf");
+  src: url("/assets/fonts/OTNeueMontreal-MediumSqueezed.otf") format("opentype");
   font-weight: 500;
+}
+
+:root {
+  --global-padding: 16px;
 }
 
 html {
@@ -13,11 +17,12 @@ body {
   background-color: white;
   color: black;
   overflow-x: hidden;
+  overscroll-behavior: none;
   padding: 0;
   margin: 0;
   font-family: "OTNeueMontreal-MediumSqueezed", "Times New Roman", serif;
   font-size: 1.6rem;
-  /* margin: 1rem; */
+  /* margin: var(--global-padding); */
 }
 
 a {
@@ -69,14 +74,16 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 2rem;
+  margin-bottom: var(--global-padding);
 }
 
 .top-left {
   position: fixed;
-  top: 10px;
-  left: 10px;
+  top: var(--global-padding);
+  left: var(--global-padding);
   z-index: 1;
+  filter: invert();
+  mix-blend-mode: difference;
 }
 
 .center-screen {
@@ -92,8 +99,8 @@ a {
   flex-direction: column;
   align-items: flex-start;
   position: fixed;
-  bottom: 10px;
-  left: 10px;
+  bottom: var(--global-padding);
+  left: var(--global-padding);
   z-index: 1;
   filter: invert();
   mix-blend-mode: difference;
@@ -244,7 +251,7 @@ section {
   gap: 36px;
   width: 300px;
   position: absolute;
-  left: 10px;
+  left: var(--global-padding);
   /* left: 0; */
   top: 50%;
   transform: translateY(-50%);
@@ -366,7 +373,7 @@ section {
   }
 
   .h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   .paragraph {
@@ -410,21 +417,21 @@ section {
 
   .bio-alignment {
     justify-content: left;
-    margin-left: 1rem;
+    margin-left: var(--global-padding);
   }
 
   .bio-container {
-    width: 336px;
+    width: 326px;
   }
 
   .pdf-container {
     width: 255px;
     height: 333px;
+    transition: none;
   }
 
-  .pdf-container {
+  .pdf-container:hover {
     transform: none;
-    box-shadow: inherit;
   }
 }
 
