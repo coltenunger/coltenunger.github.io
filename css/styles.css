@@ -5,7 +5,7 @@
 }
 
 :root {
-  --global-padding: 16px;
+  --global-padding: 14px;
 }
 
 html {
@@ -153,7 +153,6 @@ section {
 
 .mobile-modal {
   font-size: 10px;
-  /* font-size: 0.8rem; test on phone and delete if body font-size is suitable */
   position: fixed;
   display: none;
   visibility: hidden;
@@ -172,11 +171,11 @@ section {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  padding-bottom: 2.5rem;
+  width: 80%;
 }
 
-.more-info-modal div {
-  width: 92%;
+.m-desc {
+  width: 70%;
 }
 
 .modal-content {
@@ -184,8 +183,18 @@ section {
   padding: 1rem;
   box-shadow: 8px 8px 20.1px 2px rgba(0, 0, 0, 0.39);
   text-align: left;
-  width: 200px;
+  width: 260px;
   /* max-width: 90%; Ensure it looks good on smaller screens */
+}
+
+.modal-details-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.modal-details-wrapper a {
+  align-content: end;
 }
 
 .close-btn {
@@ -272,8 +281,7 @@ section {
   display: none;
   visibility: hidden;
   margin-top: 0.5rem;
-  font-size: 10px;
-  /* font-size: 0.8rem; delete this if it is too small for mobile and let it inherit the body font size */
+  /* font-size: 10px; */
 }
 
 .more-info-btn:hover {
@@ -401,8 +409,8 @@ section {
   }
 
   .card {
-    width: 259px;
-    height: 315px;
+    width: 254px;
+    height: 310px;
   }
 
   #anchor-wrapper:hover + .more-info {
@@ -432,6 +440,7 @@ section {
 
   .pdf-container:hover {
     transform: none;
+    box-shadow: 8px 8px 20.1px 2px rgba(0, 0, 0, 0.39);
   }
 }
 
