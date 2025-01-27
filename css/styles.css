@@ -304,9 +304,10 @@ section {
 .bio-container {
   display: flex;
   justify-content: center;
-  text-align: left;
+  text-align: justify;
+  text-align-last: justify;
   flex-direction: column;
-  width: 400px;
+  width: 380px;
 }
 
 .pdf-container {
