@@ -32,5 +32,44 @@
     <!--  -->
 
     <script src="js/other-pages.js"></script>
+
+    <style>
+      /* Create the dot using ::after */
+      .navlink-container-l::after {
+        content: "•"; /* Unicode dot character */
+        position: absolute;
+        right: -8px; /* Adjust this value to position the dot */
+        opacity: 0; /* Hidden by default */
+        color: #000;
+      }
+
+      /* Show dot on hover */
+      .navlink:hover::after {
+        opacity: 1;
+      }
+
+      /* Show dot for active/current page */
+      .navlink.w--current::after {
+        opacity: 1;
+      }
+
+      .navlink-container-r::after {
+        content: "•"; /* Unicode dot character */
+        position: absolute;
+        left: -8px; /* Adjust this value to position the dot */
+        opacity: 0; /* Hidden by default */
+        color: #000;
+      }
+
+      /* Show dot on hover */
+      .navlink:hover::after {
+        opacity: 1;
+      }
+
+      /* Show dot for active/current page */
+      .navlink.w--current::after {
+        opacity: 1;
+      }
+    </style>
   </body>
 </html>
