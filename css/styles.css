@@ -223,7 +223,7 @@ section {
 }
 
 .project-2-color {
-  background-color: #000000;
+  background-color: #ff9389;
 }
 
 .project-3-color {
@@ -305,7 +305,7 @@ section {
   display: flex;
   justify-content: center;
   text-align: justify;
-  text-align-last: justify;
+  /* text-align-last: justify; */
   flex-direction: column;
   width: 380px;
 }
