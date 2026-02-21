@@ -1,32 +1,22 @@
-@font-face {
-  font-family: "OTNeueMontreal-MediumSqueezed";
-  src: url("/assets/fonts/OTNeueMontreal-MediumSqueezed.otf") format("opentype");
-  font-weight: 500;
-}
-
+/* SET TO 16px or 24px */
 :root {
   --global-padding: 14px;
 }
 
-html {
+/* CAN DELETE LATER */
+/* html {
   font-size: 10px;
-}
+} */
 
 body {
-  cursor: url("/assets/windows-95-98-arrow.cur"), auto;
+  font-family: "Times New Roman", serif;
+  font-size: 1rem;
   background-color: white;
   color: black;
   overflow-x: hidden;
   overscroll-behavior: none;
   padding: 0;
   margin: 0;
-  font-family: "OTNeueMontreal-MediumSqueezed", "Times New Roman", serif;
-  font-size: 1.6rem;
-  /* margin: var(--global-padding); */
-}
-
-a {
-  cursor: url("/assets/windows-95-98-pointer.cur"), pointer;
 }
 
 .h1 {
@@ -266,7 +256,9 @@ section {
   transform: translateY(-50%);
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
 
   filter: invert();
   mix-blend-mode: difference;
@@ -318,7 +310,9 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .pdf-container:hover {
@@ -457,7 +451,9 @@ section {
   width: 16px;
   height: 16px;
   background: silver;
-  box-shadow: inset 1px 1px #dfdfdf, inset -1px -1px gray;
+  box-shadow:
+    inset 1px 1px #dfdfdf,
+    inset -1px -1px gray;
   border: 1px solid;
   border-color: silver #000 #000 silver;
 }
