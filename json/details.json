@@ -1,47 +1,56 @@
 [
   {
-    "publish_year_01": "Intrinsic Labs / 2024",
-    "category_01": "Category—Design, Web Development",
-    "description_01": "A Webflow website for a tech startup based in Columbia, SC showcasing their expertise in software/hardware Development and video production. Complete brand identity and responsive layouts created in Figma. Currently in staging phase pending content finalization."
+    "title_01": "intrinsic labs",
+    "publish_year_01": "2026",
+    "category_01": "software studio",
+    "location_01": "chicago, IL",
+    "service_01": "web design identity design motion design",
+    "credit_01": "coming soon",
+    "description_01": "Visual identity and motion design for a North Carolina software studio—custom logotype and graphic marque that reflects their ethos—…as well as brand guidelines, and other brand assets."
   },
   {
-    "publish_year_02": "Sanjana Elina / 2024",
-    "category_02": "Category—Design, Web Development",
-    "description_02": "A portfolio website for a multimedia artist, built with Squarespace to showcase photography and DJ work. Clean, responsive galleries designed to complement the artist's aesthetic."
+    "title_02": "hard times",
+    "publish_year_02": "2026",
+    "category_02": "typeface",
+    "location_02": "chicago, IL",
+    "service_02": "typography design",
+    "credit_02": "",
+    "description_02": "An experimental font inspired by Times New Roman — Hard Times is a condensed serif typeface. Available on request."
   },
   {
-    "publish_year_03": "Tesori Pelle / 2023",
-    "category_03": "Category—E-commerce Design, Web Development",
-    "description_03": "A luxury e-commerce platform for an Italian leather goods retailer, built with Shopify and custom Liquid code. Responsive UI/UX designed in Figma along with unique brand identity and bespoke logotype."
+    "title_03": "mister tiger",
+    "publish_year_03": "2025",
+    "category_03": "restaurant",
+    "location_03": "chicago, IL",
+    "service_03": "web design identity design art direction",
+    "credit_03": "photography by ambrose vargason",
+    "description_03": "A comprehensive identity design for Mister Tiger which encompassed designing and developing a dynamic new website, typographic system, social media templates, merch, menu layouts, and graphic motion."
   },
   {
-    "publish_year_04": "BenderWorks / 2023",
-    "category_04": "Category—Design, Web Development",
-    "description_04": "A modern portfolio platform for an industrial design studio based in Sacramento, CA. Built with Webflow to showcase product design and CAD work. Clean, responsive interface designed in Figma. Currently in staging phase."
+    "title_04": "sanjana elina",
+    "publish_year_04": "2025",
+    "category_04": "audio/visual artist",
+    "location_04": "chicago, IL",
+    "service_04": "web design logo design",
+    "credit_04": "motion by ambrose vargason",
+    "description_04": "Wordmark and website design and development for photographer and DJ, Sanjana Elina that unified sight and sound through integrated braille characters and visual sound waves, reflecting her experience of partial deafness and blindness."
   },
   {
-    "publish_year_05": "Harrington Publications / 2024",
-    "category_05": "Category—Software Development, AI Integration",
-    "description_05": "A proprietary full-stack web app that proofreads large manuscript against company-specific style guides, built with Python, Flask, and LLM APIs. GitHub repository available upon request."
+    "title_05": "pentole pottery",
+    "publish_year_05": "2026",
+    "category_05": "ceramic studio",
+    "location_05": "chicago, IL",
+    "service_05": "web design identity design",
+    "credit_05": "",
+    "description_05": "A website and visual identity for Pentole Pottery that celebrates imperfection and craft through the use of hand-drawn logo elements, whimsical typography, and raw textural imagery."
   },
   {
-    "publish_year_06": "Smallbone Law / 2024",
-    "category_06": "Category—Design, Web Development",
-    "description_06": "A multilingual website for a full-service law firm. Full migration from Squarespace to Webflow while preserving SEO rankings and existing content. Fresh UI/UX design with Figma. Currently in staging phase awaiting content population."
-  },
-  {
-    "publish_year_07": "Unger Builders / 2022",
-    "category_07": "Category—Web Development, Performance Optimization",
-    "description_07": "A media-rich site for a construction company to showcase their remodeling work. Built with WordPress. Custom caching solutions and image optimization implemented for enhanced performance."
-  },
-  {
-    "publish_year_08": "TuneTrove / 2021",
-    "category_08": "Category—Design, Full-stack Web Development",
-    "description_08": "A personal music blog designed with Figma and built with Node.js and EJS templating. Features custom database architecture for album reviews with advanced search and rating algorithms."
-  },
-  {
-    "publish_year_09": "Weatherby App / 2020",
-    "category_09": "Category—UI/UX Design, Web Development",
-    "description_09": "A visually-focused weather application built with JavaScript and OpenWeather API. Clean, responsive interface designed in Figma for elegant weather tracking."
+    "title_06": "tesori pelle",
+    "publish_year_06": "2024",
+    "category_06": "italian leather",
+    "location_06": "franklin, TN",
+    "service_06": "web design identity design",
+    "credit_06": "photography by ambrose vargason",
+    "description_06": "Complete brand identity for Tesori Pelle, an Italian leather distributor, that included custom logotype design, brand imagery, visual identity system, and a Shopify e-commerce website."
   }
 ]
