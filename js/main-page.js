@@ -12,16 +12,6 @@ Promise.all([
       document.getElementById("nav-footer").innerHTML = data;
     }),
 ]).then(() => {
-  // SCROLL TO TOP ON "BACK TO TOP" CLICK
-  document
-    .getElementById("scroll-indicator")
-    .addEventListener("click", function () {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth", // Smooth scrolling effect
-      });
-    });
-
   // Store projects data globally
   let projectsData = [];
 
@@ -37,7 +27,7 @@ Promise.all([
 
         // Set content for modal code blocks
         const publishYearElement = document.getElementById(
-          `publish-year-${projectNum}`
+          `publish-year-${projectNum}`,
         );
         if (publishYearElement) {
           publishYearElement.textContent =
@@ -45,14 +35,14 @@ Promise.all([
         }
 
         const categoryElement = document.getElementById(
-          `category-${projectNum}`
+          `category-${projectNum}`,
         );
 
         if (categoryElement) {
           categoryElement.textContent = project[`category_${projectNum}`];
         }
         const descriptionElement = document.getElementById(
-          `description-${projectNum}`
+          `description-${projectNum}`,
         );
 
         if (descriptionElement) {
@@ -168,7 +158,7 @@ Promise.all([
     },
     {
       threshold: 0.6, // Trigger when 60% of the section is in view
-    }
+    },
   );
 
   // Observe the relevant sections
