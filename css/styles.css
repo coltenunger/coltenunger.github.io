@@ -56,11 +56,6 @@ body {
 .unstyle-link {
   text-decoration: none;
   color: inherit;
-  transition: opacity 300ms;
-}
-
-.unstyle-link:hover {
-  opacity: 15%;
 }
 
 #scroll-indicator {
@@ -77,6 +72,31 @@ body {
   z-index: 1;
   filter: invert();
   mix-blend-mode: difference;
+}
+
+a.logo {
+  transition: opacity 0.2s;
+}
+
+a.logo:hover {
+  opacity: 15%;
+}
+
+a.link::before {
+  content: "[";
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+a.link::after {
+  content: "]";
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+a.link:hover::before,
+a.link:hover::after {
+  opacity: 1;
 }
 
 .center-screen {

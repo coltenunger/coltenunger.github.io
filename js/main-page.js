@@ -53,11 +53,7 @@ Promise.all([
     .catch((error) => console.error("Error loading JSON:", error));
 
   // TOGGLE NAV LINK STYLES BASED ON SECTION VISIBILITY.
-  // Grab the Work link and Project nav links
-  const workNavLink = document.getElementById("work-navlink");
-
   // Define the sections we care about (Welcome message and project sections)
-  const welcomeMessage = document.getElementById("welcome-message");
   const projectSections = [
     {
       section: document.getElementById("project01"),
