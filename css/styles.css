@@ -1,16 +1,10 @@
-/* SET TO 16px or 24px */
 :root {
-  --global-padding: 14px;
+  --global-padding: 16px;
 }
-
-/* CAN DELETE LATER */
-/* html {
-  font-size: 10px;
-} */
 
 body {
   font-family: "Times New Roman", serif;
-  font-size: 1rem;
+  font-size: 14px;
   background-color: white;
   color: black;
   overflow-x: hidden;
@@ -39,8 +33,12 @@ body {
   text-decoration: line-through;
 }
 
-.caps {
+.uppercase {
   text-transform: uppercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
 }
 
 .white-text {
@@ -58,6 +56,11 @@ body {
 .unstyle-link {
   text-decoration: none;
   color: inherit;
+  transition: opacity 300ms;
+}
+
+.unstyle-link:hover {
+  opacity: 15%;
 }
 
 #scroll-indicator {
@@ -67,10 +70,10 @@ body {
   margin-bottom: var(--global-padding);
 }
 
-.top-left {
-  position: fixed;
-  top: var(--global-padding);
-  left: var(--global-padding);
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--global-padding);
   z-index: 1;
   filter: invert();
   mix-blend-mode: difference;
