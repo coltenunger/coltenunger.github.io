@@ -111,14 +111,6 @@ a.toggle-btn:hover::after {
   mix-blend-mode: difference;
 }
 
-/* .project-footer:hover .project-link {
-  opacity: 0.15;
-} */
-
-/* .project-footer:hover .project-link:hover {
-  opacity: 1;
-} */
-
 .project-link {
   display: flex;
   flex-direction: column;
