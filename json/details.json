@@ -1,56 +1,68 @@
 [
   {
-    "title_01": "intrinsic labs",
-    "publish_year_01": "2026",
-    "category_01": "software studio",
-    "location_01": "chicago, IL",
-    "service_01": "web design identity design motion design",
-    "credit_01": "coming soon",
-    "description_01": "Visual identity and motion design for a North Carolina software studio—custom logotype and graphic marque that reflects their ethos—…as well as brand guidelines, and other brand assets."
+    "name": "intrinsic labs",
+    "category": "Software Studio",
+    "year": "2026",
+    "location": "chicago, IL",
+    "service": "web design identity design motion design",
+    "credit": "",
+    "desc": "Visual identity and motion design for a North Carolina software studio—custom logotype and graphic marque that reflects their ethos—…as well as brand guidelines, and other brand assets.",
+    "url": "pages/selected_works/intrinsic-labs.html",
+    "preview": "assets/images/selected_works/IL-prev.jpg"
   },
   {
-    "title_02": "hard times",
-    "publish_year_02": "2026",
-    "category_02": "typeface",
-    "location_02": "chicago, IL",
-    "service_02": "typography design",
-    "credit_02": "",
-    "description_02": "An experimental font inspired by Times New Roman — Hard Times is a condensed serif typeface. Available on request."
+    "name": "hard times",
+    "year": "2026",
+    "category": "typeface",
+    "location": "chicago, IL",
+    "service": "typography design",
+    "credit": "",
+    "desc": "An experimental font inspired by Times New Roman — Hard Times is a condensed serif typeface. Available on request.",
+    "url": "pages/selected_works/hard-times.html",
+    "preview": "assets/images/selected_works/HT-prev.jpg"
   },
   {
-    "title_03": "mister tiger",
-    "publish_year_03": "2025",
-    "category_03": "restaurant",
-    "location_03": "chicago, IL",
-    "service_03": "web design identity design art direction",
-    "credit_03": "photography by ambrose vargason",
-    "description_03": "A comprehensive identity design for Mister Tiger which encompassed designing and developing a dynamic new website, typographic system, social media templates, merch, menu layouts, and graphic motion."
+    "name": "mister tiger",
+    "category": "restaurant",
+    "year": "2025",
+    "location": "chicago, IL",
+    "service": "web design identity design art direction",
+    "credit": "photography by ambrose vargason",
+    "desc": "A comprehensive identity design for Mister Tiger which encompassed designing and developing a dynamic new website, typographic system, social media templates, merch, menu layouts, and graphic motion.",
+    "url": "pages/selected_works/mister-tiger.html",
+    "preview": "assets/images/selected_works/MT-prev.jpg"
   },
   {
-    "title_04": "sanjana elina",
-    "publish_year_04": "2025",
-    "category_04": "audio/visual artist",
-    "location_04": "chicago, IL",
-    "service_04": "web design logo design",
-    "credit_04": "motion by ambrose vargason",
-    "description_04": "Wordmark and website design and development for photographer and DJ, Sanjana Elina that unified sight and sound through integrated braille characters and visual sound waves, reflecting her experience of partial deafness and blindness."
+    "name": "sanjana elina",
+    "category": "audio/visual artist",
+    "year": "2025",
+    "location": "chicago, IL",
+    "service": "web design logo design",
+    "credit": "motion by ambrose vargason",
+    "desc": "Wordmark and website design and development for photographer and DJ, Sanjana Elina that unified sight and sound through integrated braille characters and visual sound waves, reflecting her experience of partial deafness and blindness.",
+    "url": "pages/selected_works/sanjana-elina.html",
+    "preview": "assets/images/selected_works/SE-prev.jpg"
   },
   {
-    "title_05": "pentole pottery",
-    "publish_year_05": "2026",
-    "category_05": "ceramic studio",
-    "location_05": "chicago, IL",
-    "service_05": "web design identity design",
-    "credit_05": "",
-    "description_05": "A website and visual identity for Pentole Pottery that celebrates imperfection and craft through the use of hand-drawn logo elements, whimsical typography, and raw textural imagery."
+    "name": "pentole pottery",
+    "category": "ceramic studio",
+    "year": "2026",
+    "location": "chicago, IL",
+    "service": "web design identity design",
+    "credit": "",
+    "description": "A website and visual identity for Pentole Pottery that celebrates imperfection and craft through the use of hand-drawn logo elements, whimsical typography, and raw textural imagery.",
+    "url": "pages/selected_works/pentole-pottery.html",
+    "preview": "assets/images/selected_works/PP-prev.jpg"
   },
   {
-    "title_06": "tesori pelle",
-    "publish_year_06": "2024",
-    "category_06": "italian leather",
-    "location_06": "franklin, TN",
-    "service_06": "web design identity design",
-    "credit_06": "photography by ambrose vargason",
-    "description_06": "Complete brand identity for Tesori Pelle, an Italian leather distributor, that included custom logotype design, brand imagery, visual identity system, and a Shopify e-commerce website."
+    "name": "tesori pelle",
+    "category": "italian leather",
+    "year": "2024",
+    "location": "nashville, TN",
+    "service": "web design identity design",
+    "credit": "photography by ambrose vargason",
+    "description": "Complete brand identity for Tesori Pelle, an Italian leather distributor, that included custom logotype design, brand imagery, visual identity system, and a Shopify e-commerce website.",
+    "url": "pages/selected_works/tesori-pelle.html",
+    "preview": "assets/images/selected_works/TP-prev.jpg"
   }
 ]
