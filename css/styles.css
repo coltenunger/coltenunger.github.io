@@ -40,24 +40,24 @@ a.logo:hover {
   opacity: 15%;
 }
 
-a.info-btn {
+a.toggle-btn {
   text-transform: capitalize;
 }
 
-a.info-btn::before {
+a.toggle-btn::before {
   content: "[";
   opacity: 0;
   /* transition: opacity 0.2s; */
 }
 
-a.info-btn::after {
+a.toggle-btn::after {
   content: "]";
   opacity: 0;
   transition: opacity 0.2s;
 }
 
-a.info-btn:hover::before,
-a.info-btn:hover::after {
+a.toggle-btn:hover::before,
+a.toggle-btn:hover::after {
   opacity: 1;
 }
 
@@ -180,7 +180,7 @@ a.info-btn:hover::after {
     visibility: hidden;
   }
 
-  .more-info-btn {
+  .more-toggle-btn {
     display: flex;
     visibility: visible;
   }

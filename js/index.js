@@ -27,9 +27,14 @@ Promise.all([
     }),
   loadProjects(),
 ]).then(() => {
+  const navToggle = document.getElementById("nav-toggle");
+  navToggle.textContent = "info";
+  navToggle.href = "/pages/info.html";
+
   const links = document.querySelectorAll(".project-link");
   const previewImg = document.getElementById("preview-image");
 
+  // listens for a hover and changes index preview image accordingly
   links.forEach((link) => {
     link.addEventListener("mouseenter", () => {
       previewImg.src = link.dataset.preview;
