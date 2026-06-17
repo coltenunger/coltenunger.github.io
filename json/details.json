@@ -7,7 +7,7 @@
     "service": "web design identity design motion design",
     "credit": "",
     "desc": "Visual identity and motion design for a North Carolina software studio—custom logotype and graphic marque that reflects their ethos—…as well as brand guidelines, and other brand assets.",
-    "url": "pages/selected_works/intrinsic-labs.html",
+    "url": "./selected_works/intrinsic-labs.html",
     "preview": "assets/images/selected_works/IL-prev.jpg"
   },
   {
@@ -18,7 +18,7 @@
     "service": "typography design",
     "credit": "",
     "desc": "An experimental font inspired by Times New Roman — Hard Times is a condensed serif typeface. Available on request.",
-    "url": "pages/selected_works/hard-times.html",
+    "url": "./selected_works/hard-times.html",
     "preview": "assets/images/selected_works/HT-prev.jpg"
   },
   {
@@ -29,7 +29,7 @@
     "service": "web design identity design art direction",
     "credit": "photography by ambrose vargason",
     "desc": "A comprehensive identity design for Mister Tiger which encompassed designing and developing a dynamic new website, typographic system, social media templates, merch, menu layouts, and graphic motion.",
-    "url": "pages/selected_works/mister-tiger.html",
+    "url": "./selected_works/mister-tiger.html",
     "preview": "assets/images/selected_works/MT-prev.jpg"
   },
   {
@@ -40,7 +40,7 @@
     "service": "web design logo design",
     "credit": "motion by ambrose vargason",
     "desc": "Wordmark and website design and development for photographer and DJ, Sanjana Elina that unified sight and sound through integrated braille characters and visual sound waves, reflecting her experience of partial deafness and blindness.",
-    "url": "pages/selected_works/sanjana-elina.html",
+    "url": "./selected_works/sanjana-elina.html",
     "preview": "assets/images/selected_works/SE-prev.jpg"
   },
   {
@@ -51,7 +51,7 @@
     "service": "web design identity design",
     "credit": "",
     "description": "A website and visual identity for Pentole Pottery that celebrates imperfection and craft through the use of hand-drawn logo elements, whimsical typography, and raw textural imagery.",
-    "url": "pages/selected_works/pentole-pottery.html",
+    "url": "./selected_works/pentole-pottery.html",
     "preview": "assets/images/selected_works/PP-prev.jpg"
   },
   {
@@ -62,7 +62,7 @@
     "service": "web design identity design",
     "credit": "photography by ambrose vargason",
     "description": "Complete brand identity for Tesori Pelle, an Italian leather distributor, that included custom logotype design, brand imagery, visual identity system, and a Shopify e-commerce website.",
-    "url": "pages/selected_works/tesori-pelle.html",
+    "url": "./selected_works/tesori-pelle.html",
     "preview": "assets/images/selected_works/TP-prev.jpg"
   }
 ]

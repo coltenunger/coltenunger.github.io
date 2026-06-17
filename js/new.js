@@ -60,12 +60,7 @@ Promise.all([
     link.classList.remove("dimmed");
   });
 
-  footer.addEventListener("mouseout", (e) => {
-    const leavingLink = e.target.closest(".project-link");
-    const enteringLink = e.relatedTarget?.closest(".project-link");
-
-    if (leavingLink && !enteringLink) {
-      links.forEach((l) => l.classList.remove("dimmed"));
-    }
+  footer.addEventListener("mouseleave", () => {
+    links.forEach((l) => l.classList.remove("dimmed"));
   });
 });

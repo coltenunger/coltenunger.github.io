@@ -1,6 +1,6 @@
 :root {
   --global-padding: 16px;
-  --opacity-transition: opacity 800ms ease;
+  --opacity-transition: opacity 0.6s ease;
 }
 
 body {
@@ -14,6 +14,11 @@ body {
   overscroll-behavior: none;
   padding: 0;
   margin: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
 }
 
 #overlay {
@@ -54,7 +59,7 @@ a.logo {
 }
 
 a.logo:hover {
-  opacity: 15%;
+  opacity: 0.15;
 }
 
 a.toggle-btn {
@@ -90,17 +95,24 @@ a.toggle-btn:hover::after {
   mix-blend-mode: difference;
 }
 
+/* .project-footer:hover .project-link {
+  opacity: 0.15;
+} */
+
+/* .project-footer:hover .project-link:hover {
+  opacity: 1;
+} */
+
 .project-link {
   display: flex;
   flex-direction: column;
-  opacity: 15%;
   transition: var(--opacity-transition);
   z-index: 1;
   text-transform: capitalize;
 }
 
-.project-link:hover {
-  opacity: 1;
+.project-link.dimmed {
+  opacity: 0.15;
 }
 
 .project-category {
@@ -119,99 +131,58 @@ a.toggle-btn:hover::after {
 #preview-image {
   width: 100%;
   opacity: 0;
-  transition: var(--opacity-transition);
+  transition: opacity 0.8s ease;
 }
 
 #preview-image.visible {
   opacity: 1;
 }
 
+.treelimb-container {
+  position: fixed;
+  right: 0;
+  top: 43%;
+  transform: translateY(-50%);
+}
+
+.treelimb {
+  width: 75vw;
+  height: auto;
+}
+
+.info-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: var(--global-padding);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: white;
+  mix-blend-mode: difference;
+  gap: 2rem;
+}
+
+.email {
+  text-transform: lowercase;
+  transition: var(--opacity-transition);
+}
+
+.email:hover {
+  opacity: 0.15;
+}
+
+.bio {
+  width: 12rem;
+}
+
 /* MEDIA QUERIES | SMALLER DESKTOP */
 @media (max-width: 1320px) {
   .h1 {
-    font-size: 4.5rem;
-  }
-
-  .card {
-    width: 535px;
-    height: 321px;
-  }
-
-  .more-info {
-    width: 240px;
-  }
-
-  .pdf-container {
-    width: 355px;
-    height: 464.16px;
   }
 }
 
 /* MEDIA QUERIES | MOBILE AND TABLET */
 @media (max-width: 768px) and (max-width: 1024px) {
-  body {
-    font-size: 1.4rem; /* maybe make this 1rem? */
-  }
-
-  .h1 {
-    font-size: 3.3rem;
-  }
-
-  .h2 {
-    font-size: 2.5rem;
-  }
-
-  .paragraph {
-    font-size: 1.8rem;
-  }
-
-  .small {
-    font-size: 1.2rem;
-  }
-
-  .center-screen {
-    width: auto; /* might need to remove this if content on mobile is not center */
-  }
-
-  section {
-    position: relative;
-  }
-
-  .nav-options {
-    display: flex;
-  }
-
-  .mobile-modal {
-    visibility: visible;
-  }
-
-  .card {
-    width: 254px;
-    height: 310px;
-  }
-
-  #anchor-wrapper:hover + .more-info {
-    opacity: 0;
-    visibility: hidden;
-  }
-
-  .bio-alignment {
-    justify-content: left;
-    margin-left: var(--global-padding);
-  }
-
-  .bio-container {
-    width: 326px;
-  }
-
-  .pdf-container {
-    width: 255px;
-    height: 333px;
-    transition: none;
-  }
-
-  .pdf-container:hover {
-    transform: none;
-    box-shadow: 8px 8px 20.1px 2px rgba(0, 0, 0, 0.39);
-  }
 }
