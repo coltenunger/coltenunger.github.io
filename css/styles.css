@@ -1,6 +1,6 @@
 :root {
   --global-padding: 16px;
-  --opacity-transition: opacity 500ms ease;
+  --opacity-transition: opacity 800ms ease;
 }
 
 body {
@@ -16,12 +16,29 @@ body {
   margin: 0;
 }
 
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  opacity: 0;
+  pointer-events: none;
+  transition: var(--opacity-transition);
+  z-index: 999;
+}
+
+#overlay.fade-in {
+  opacity: 1;
+  pointer-events: all;
+}
+
 .unstyle-link {
   text-decoration: none;
   color: inherit;
 }
 
-/* NEW start */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -53,7 +70,7 @@ a.toggle-btn::before {
 a.toggle-btn::after {
   content: "]";
   opacity: 0;
-  transition: opacity 0.2s;
+  /* transition: opacity 0.2s; */
 }
 
 a.toggle-btn:hover::before,
@@ -108,8 +125,6 @@ a.toggle-btn:hover::after {
 #preview-image.visible {
   opacity: 1;
 }
-
-/* NEW end*/
 
 /* MEDIA QUERIES | SMALLER DESKTOP */
 @media (max-width: 1320px) {
@@ -178,11 +193,6 @@ a.toggle-btn:hover::after {
   #anchor-wrapper:hover + .more-info {
     opacity: 0;
     visibility: hidden;
-  }
-
-  .more-toggle-btn {
-    display: flex;
-    visibility: visible;
   }
 
   .bio-alignment {
