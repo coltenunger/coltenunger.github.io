@@ -18,11 +18,13 @@ async function loadSelected() {
   const slideshow = document.createElement("div");
   slideshow.classList.add("slideshow");
 
+  const format = project.photoFormat || "jpg";
+
   for (let i = 1; i <= project.photoCount; i++) {
     const img = document.createElement("img");
-    img.src = `/assets/images/selected_works/${project.slug}/${i}.jpg`;
+    img.src = `/assets/images/selected_works/${project.slug}/${i}.${format}`;
     img.loading = "lazy";
-    if (i === 1) img.classList.add("active"); // show first image by default
+    if (i === 1) img.classList.add("active");
     slideshow.appendChild(img);
   }
 
