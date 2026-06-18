@@ -15,7 +15,7 @@
 
 body {
   font-family: "Times New Roman", serif;
-  font-size: 12px;
+  font-size: 13px;
   line-height: 1.4;
   letter-spacing: -0.01em;
   background-color: white;
@@ -24,12 +24,6 @@ body {
   overscroll-behavior: none;
   padding: 0;
   margin: 0;
-}
-
-::selection,
-::-moz-selection {
-  background: #facc15;
-  color: #111827;
 }
 
 p {
@@ -46,7 +40,7 @@ p {
   background: white;
   opacity: 0;
   pointer-events: none;
-  transition: var(--opacity-transition);
+  transition: opacity 0.8s ease;
   z-index: 999;
 }
 
@@ -61,10 +55,16 @@ p {
 }
 
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
   display: flex;
   justify-content: space-between;
   padding: var(--global-padding);
-  z-index: 1;
+
+  z-index: 10;
   color: white;
   mix-blend-mode: difference;
 }
@@ -102,6 +102,7 @@ a.toggle-btn:hover::after {
 .project-footer {
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
   padding: var(--global-padding);
   position: fixed;
   bottom: 0;
@@ -115,8 +116,8 @@ a.toggle-btn:hover::after {
   display: flex;
   flex-direction: column;
   transition: var(--opacity-transition);
-  z-index: 1;
-  text-transform: capitalize;
+  z-index: 10;
+  /* text-transform: capitalize; */
 }
 
 .project-link.dimmed {
@@ -151,6 +152,12 @@ a.toggle-btn:hover::after {
   right: 0;
   top: 43%;
   transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 1.5s ease;
+}
+
+.treelimb-container.visible {
+  opacity: 1;
 }
 
 .treelimb {
@@ -182,6 +189,93 @@ a.toggle-btn:hover::after {
 }
 
 .bio {
+  width: 12rem;
+}
+
+.slideshow {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.slideshow img {
+  grid-area: 1 / 1; /* stack all images in the same cell */
+  height: 100vh;
+  width: auto;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.slideshow img.active {
+  opacity: 1;
+}
+
+#slideshow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#prev-zone,
+#next-zone {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 50vw;
+  cursor: pointer;
+  z-index: 5; /* below navbar which should be higher */
+}
+
+#prev-zone {
+  left: 0;
+  cursor:
+    url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32'><text y='24' font-size='12px'>[Prev]</text></svg>")
+      16 16,
+    auto;
+}
+
+#next-zone {
+  right: 0;
+  cursor:
+    url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32'><text y='24' font-size='12px'>[Next]</text></svg>")
+      16 16,
+    auto;
+}
+
+.project-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2rem;
+  padding: var(--global-padding);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: white;
+  mix-blend-mode: difference;
+  z-index: 10;
+}
+
+.project-details .detail {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-details .detail span {
+  white-space: pre-line;
+}
+
+.credit-name {
+  transition: var(--opacity-transition);
+}
+
+.credit-name:hover {
+  opacity: 0.15;
+}
+
+.description {
   width: 12rem;
 }
 

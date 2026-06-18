@@ -29,4 +29,8 @@ Promise.all([
 
   document.getElementById("copyright").textContent =
     `[Copyright] ${new Date().getFullYear()} Colten Wade`;
+
+  setTimeout(() => {
+    document.querySelector(".treelimb-container").classList.add("visible");
+  }, 300);
 });
