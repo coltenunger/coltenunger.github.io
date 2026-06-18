@@ -53,7 +53,7 @@
   {
     "name": "Sanjana Elina",
     "slug": "sanjana-elina",
-    "photoCount": 1,
+    "photoCount": 2,
     "photoFormat": "",
     "category": "Audio/Visual Artist",
     "year": "2025",
@@ -70,7 +70,7 @@
   {
     "name": "Pentole Pottery",
     "slug": "pentole-pottery",
-    "photoCount": 1,
+    "photoCount": 3,
     "photoFormat": "",
     "category": "Ceramic Studio",
     "year": "2026",
@@ -87,8 +87,8 @@
   {
     "name": "Tesori Pelle",
     "slug": "tesori-pelle",
-    "photoCount": 1,
-    "photoFormat": "",
+    "photoCount": 7,
+    "photoFormat": "avif",
     "category": "Italian Leather",
     "year": "2024",
     "location": "Nashville, TN",
