@@ -70,7 +70,9 @@ async function loadSelected() {
   const total = images.length;
 
   function updateCursorLabel() {
-    cursorLabel.textContent = `${current + 1}/${total}`;
+    const currentNum = String(current + 1).padStart(2, "0");
+    const totalNum = String(total).padStart(2, "0");
+    cursorLabel.textContent = `${currentNum}\u00A0 / \u00A0${totalNum}`;
   }
 
   updateCursorLabel();

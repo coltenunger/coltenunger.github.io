@@ -71,12 +71,12 @@ p {
 
 a.logo {
   text-transform: uppercase;
-  transition: var(--opacity-transition);
+  /* transition: var(--opacity-transition); */
 }
 
-a.logo:hover {
+/* a.logo:hover {
   opacity: 0.15;
-}
+} */
 
 a.toggle-btn {
   text-transform: capitalize;
