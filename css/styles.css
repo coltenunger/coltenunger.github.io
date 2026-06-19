@@ -9,7 +9,7 @@
 }
 
 :root {
-  --global-padding: 16px;
+  --global-padding: 1rem;
   --opacity-transition: opacity 0.6s ease;
 }
 
@@ -145,6 +145,10 @@ a.toggle-btn:hover::after {
 
 #preview-image.visible {
   opacity: 1;
+}
+
+.coming-soon {
+  cursor: default;
 }
 
 .treelimb-container {

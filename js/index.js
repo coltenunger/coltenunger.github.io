@@ -4,6 +4,20 @@ async function loadProjects() {
   const footer = document.querySelector(".project-footer");
 
   projects.forEach((project) => {
+    if (!project.photoCount) {
+      // no photos yet — render plain text instead of a link
+      const div = document.createElement("div");
+      div.classList.add("project-link", "coming-soon");
+
+      div.innerHTML = `
+        <span class="project-name">${project.name}</span>
+        <span class="project-category">Coming Soon</span>
+        <span class="project-year">${project.year}</span>
+      `;
+
+      footer.appendChild(div);
+      return;
+    }
     const a = document.createElement("a");
     a.href = project.url;
     a.classList.add("project-link", "unstyle-link");
