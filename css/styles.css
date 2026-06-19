@@ -227,24 +227,30 @@ a.toggle-btn:hover::after {
   top: 0;
   height: 100vh;
   width: 50vw;
-  cursor: pointer;
+  cursor: none;
   z-index: 5; /* below navbar which should be higher */
 }
 
 #prev-zone {
   left: 0;
-  cursor:
-    url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32'><text y='24' font-size='12px'>[Prev]</text></svg>")
-      16 16,
-    auto;
 }
 
 #next-zone {
   right: 0;
-  cursor:
-    url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32'><text y='24' font-size='12px'>[Next]</text></svg>")
-      16 16,
-    auto;
+}
+
+#cursor-label {
+  position: fixed;
+  pointer-events: none;
+  z-index: 100;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  font-size: 12px;
+  transition: opacity 0.2s;
+}
+
+#cursor-label.visible {
+  opacity: 1;
 }
 
 .project-details {

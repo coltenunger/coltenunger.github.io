@@ -62,14 +62,43 @@ async function loadSelected() {
     images[current].classList.add("active"); // fade in next
   }
 
+  const prevZone = document.getElementById("prev-zone");
+  const nextZone = document.getElementById("next-zone");
+
+  // cursor label showing current image position
+  const cursorLabel = document.getElementById("cursor-label");
+  const total = images.length;
+
+  function updateCursorLabel() {
+    cursorLabel.textContent = `${current + 1}/${total}`;
+  }
+
+  updateCursorLabel();
+
+  document.addEventListener("mousemove", (e) => {
+    cursorLabel.style.left = e.clientX + "px";
+    cursorLabel.style.top = e.clientY + "px";
+  });
+
+  [prevZone, nextZone].forEach((zone) => {
+    zone.addEventListener("mouseenter", () => {
+      cursorLabel.classList.add("visible");
+    });
+    zone.addEventListener("mouseleave", () => {
+      cursorLabel.classList.remove("visible");
+    });
+  });
+
   // clicking left side goes to previous image (wraps around)
-  document.getElementById("prev-zone").addEventListener("click", () => {
+  prevZone.addEventListener("click", () => {
     goTo((current - 1 + images.length) % images.length);
+    updateCursorLabel();
   });
 
   // clicking right side goes to next image (wraps around)
-  document.getElementById("next-zone").addEventListener("click", () => {
+  nextZone.addEventListener("click", () => {
     goTo((current + 1) % images.length);
+    updateCursorLabel();
   });
 }
 
