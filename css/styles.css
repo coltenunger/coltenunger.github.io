@@ -247,6 +247,8 @@ a.toggle-btn:hover::after {
   opacity: 0;
   font-size: 12px;
   transition: opacity 0.2s;
+  color: white;
+  mix-blend-mode: difference;
 }
 
 #cursor-label.visible {
