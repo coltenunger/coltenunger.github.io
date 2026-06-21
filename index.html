@@ -12,6 +12,10 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
+    <div id="enter-overlay">
+      <button id="enter-btn">[Enter]</button>
+    </div>
+
     <div id="overlay" class="fade-in"></div>
 
     <div id="nav-header"></div>
@@ -24,7 +28,12 @@
       <!-- DYNAMICALLY RENDERED CONTENT -->
     </footer>
 
+    <audio id="bgm" preload="auto" loop>
+      <source src="assets/audio/20062026.mp3" type="audio/mpeg" />
+    </audio>
+
     <script src="/js/index.js"></script>
+    <script src="/js/audio.js"></script>
     <script src="/js/transition.js"></script>
     <script src="/js/smooth-scroll.js"></script>
   </body>
