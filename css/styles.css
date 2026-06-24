@@ -161,7 +161,6 @@ a.toggle-btn:hover::after {
   flex-direction: column;
   transition: var(--opacity-transition);
   z-index: 10;
-  /* text-transform: capitalize; */
 }
 
 .project-link.dimmed {
@@ -193,6 +192,10 @@ a.toggle-btn:hover::after {
 
 .coming-soon {
   cursor: default;
+}
+
+.coming-soon:hover {
+  pointer-events: none;
 }
 
 #sakura-container {
