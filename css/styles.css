@@ -18,8 +18,8 @@ body {
   font-size: 12px;
   line-height: 1.4;
   letter-spacing: -0.01em;
-  background-color: white;
-  color: black;
+  background-color: #fff;
+  color: #000;
   overflow-x: hidden;
   overscroll-behavior: none;
   padding: 0;
@@ -36,7 +36,7 @@ button {
   cursor: pointer;
 }
 
-#enter-overlay {
+#blur-wall {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,13 +44,14 @@ button {
   width: 100%;
   height: 100%;
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* for Safari */
   background: rgba(255, 255, 255, 0.5);
   opacity: 1;
   transition: opacity 1s ease;
   z-index: 999;
 }
 
-#enter-overlay.hidden {
+#blur-wall.hidden {
   opacity: 0;
   pointer-events: none;
 }
@@ -152,6 +153,7 @@ a.toggle-btn:hover::after {
   right: 0;
   color: white;
   mix-blend-mode: difference;
+  z-index: 10;
 }
 
 .project-link {
@@ -193,21 +195,39 @@ a.toggle-btn:hover::after {
   cursor: default;
 }
 
-.treelimb-container {
-  position: fixed;
-  right: 0;
-  top: 43%;
-  transform: translateY(-50%);
+#sakura-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
   opacity: 0;
-  transition: opacity 1.5s ease;
+  transition: opacity 0.8s ease;
+  /* z-index: -2; */
 }
 
-.treelimb-container.visible {
+#sakura-container video {
+  position: absolute;
+  right: 0;
+  transform: translateY(-50%); /* vertically center */
+  top: 50%;
+  width: 100%;
+  /* top: 45%;
+  width: 73%; */
+  height: auto;
+}
+#sakura-container.visible {
   opacity: 1;
 }
 
-.treelimb {
-  width: 75vw;
+.flower-container {
+  position: fixed;
+  right: 0%;
+  bottom: 10%;
+  transform: rotate(180deg) scaleX(-1);
+}
+
+.flower-svg {
+  width: 40vw;
   height: auto;
 }
 

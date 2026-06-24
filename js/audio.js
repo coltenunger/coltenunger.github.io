@@ -1,24 +1,31 @@
-// ENTER CODE
+const blurWall = document.getElementById("blur-wall");
 const enterBtn = document.getElementById("enter-btn");
-const blurWall = document.getElementById("enter-overlay");
+const audio = document.getElementById("bgm");
+audio.volume = 0.5;
 
-enterBtn.addEventListener("click", () => {
-  blurWall.classList.add("hidden");
+// Check if this is a returning visitor
+const visited = localStorage.getItem("visited");
 
-  setTimeout(() => {
-    blurWall.style.display = "none";
-  }, 800);
-});
+// Returning visitor
+if (visited) {
+  blurWall.style.display = "none";
+  blurWall.remove();
 
-// MUSIC
-const music = document.getElementById("bgm");
+  audio.play().catch(() => {
+    throw new Error("Audio will not play because of browser restrictions.");
+  });
+} else {
+  // First visit
+  enterBtn.addEventListener("click", () => {
+    // Remember the visitor
+    localStorage.setItem("visited", "true");
 
-music.volume = 0.5;
+    audio.play();
 
-document.addEventListener(
-  "click",
-  () => {
-    music.play();
-  },
-  { once: true },
-);
+    blurWall.classList.add("hidden");
+
+    setTimeout(() => {
+      blurWall.style.display = "none";
+    }, 800);
+  });
+}

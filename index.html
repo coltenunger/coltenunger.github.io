@@ -12,11 +12,22 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <div id="enter-overlay">
-      <button id="enter-btn">[Enter]</button>
+    <div id="blur-wall">
+      <button id="enter-btn">[Proceed]</button>
     </div>
 
     <div id="overlay" class="fade-in"></div>
+
+    <div id="sakura-container">
+      <video class="sakura-video" autoplay muted loop playsinline>
+        <source
+          src="/assets/video/sakura[transparent].webm"
+          type="video/webm"
+        />
+        <source src="/assets/video/sakura.mp4" type="video/mp4" />
+        <!-- ^ Fallback for older browsers -->
+      </video>
+    </div>
 
     <div id="nav-header"></div>
 
@@ -29,7 +40,7 @@
     </footer>
 
     <audio id="bgm" preload="auto" loop>
-      <source src="assets/audio/20062026.mp3" type="audio/mpeg" />
+      <source src="assets/audio/20062026[8-bit].mp3" type="audio/mpeg" />
     </audio>
 
     <script src="/js/index.js"></script>

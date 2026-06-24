@@ -48,11 +48,13 @@ Promise.all([
   const links = document.querySelectorAll(".project-link");
   const previewImg = document.getElementById("preview-image");
   const footer = document.querySelector(".project-footer");
+  const sakuraBox = document.getElementById("sakura-container");
 
   // listens for a hover and changes index preview image accordingly
   links.forEach((link) => {
     link.addEventListener("mouseenter", () => {
       previewImg.classList.remove("visible");
+      sakuraBox.classList.remove("visible");
 
       setTimeout(() => {
         previewImg.src = link.dataset.preview;
@@ -62,6 +64,7 @@ Promise.all([
 
     link.addEventListener("mouseleave", () => {
       previewImg.classList.remove("visible");
+      sakuraBox.classList.add("visible");
     });
   });
 
@@ -82,4 +85,9 @@ Promise.all([
       links.forEach((l) => l.classList.remove("dimmed"));
     }
   });
+
+  // LEAVE OUT FOR NOW
+  setTimeout(() => {
+    sakuraBox.classList.add("visible");
+  }, 400);
 });

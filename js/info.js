@@ -21,7 +21,8 @@ Promise.all([
         second: "2-digit",
         timeZoneName: "short",
       })
-      .replace(/,/g, "");
+      .replace(/(\d{1,2}), /, "$1 ");
+    // or for no commas       .replace(/,/g, "");
   }
 
   updateClock();
@@ -29,8 +30,4 @@ Promise.all([
 
   document.getElementById("copyright").textContent =
     `[Copyright] ${new Date().getFullYear()} Colten Wade`;
-
-  setTimeout(() => {
-    document.querySelector(".treelimb-container").classList.add("visible");
-  }, 300);
 });
