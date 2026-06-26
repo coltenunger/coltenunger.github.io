@@ -11,6 +11,7 @@
 :root {
   --global-padding: 1rem;
   --opacity-transition: opacity 0.6s ease;
+  --dimmed: 0.15;
 }
 
 body {
@@ -164,7 +165,7 @@ a.toggle-btn:hover::after {
 }
 
 .project-link.dimmed {
-  opacity: 0.15;
+  opacity: var(--dimmed);
 }
 
 .project-category {
@@ -176,25 +177,28 @@ a.toggle-btn:hover::after {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  pointer-events: none; /* so it doesn't interfere with hovering */
+  height: 100vh;
+  pointer-events: none;
   z-index: -1;
 }
 
-#preview-image {
-  width: 100%;
+#preview-container img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  width: auto; /* let the browser calculate width based on aspect ratio */
   opacity: 0;
-  transition: opacity 0.8s ease;
+  transition: var(--opacity-transition);
 }
 
-#preview-image.visible {
+#preview-container img.visible {
   opacity: 1;
 }
 
 .coming-soon {
   cursor: default;
-}
-
-.coming-soon:hover {
   pointer-events: none;
 }
 
@@ -204,8 +208,8 @@ a.toggle-btn:hover::after {
   height: 100vh;
   overflow: hidden;
   opacity: 0;
-  transition: opacity 0.8s ease;
-  /* z-index: -2; */
+  transition: var(--opacity-transition);
+  z-index: -2;
 }
 
 #sakura-container video {
@@ -214,10 +218,9 @@ a.toggle-btn:hover::after {
   transform: translateY(-50%); /* vertically center */
   top: 50%;
   width: 100%;
-  /* top: 45%;
-  width: 73%; */
   height: auto;
 }
+
 #sakura-container.visible {
   opacity: 1;
 }
@@ -254,7 +257,7 @@ a.toggle-btn:hover::after {
 }
 
 .email:hover {
-  opacity: 0.15;
+  opacity: var(--dimmed);
 }
 
 .bio {
@@ -330,7 +333,7 @@ a.toggle-btn:hover::after {
   bottom: 0;
   left: 0;
   right: 0;
-  color: white;
+  color: #fff;
   mix-blend-mode: difference;
   z-index: 10;
 }
@@ -349,7 +352,7 @@ a.toggle-btn:hover::after {
 }
 
 .credit-name:hover {
-  opacity: 0.15;
+  opacity: var(--dimmed);
 }
 
 .description {

@@ -2,6 +2,7 @@ async function loadProjects() {
   const response = await fetch("json/details.json");
   const projects = await response.json();
   const footer = document.querySelector(".project-footer");
+  const previewContainer = document.getElementById("preview-container");
 
   projects.forEach((project) => {
     if (!project.photoCount) {
@@ -18,10 +19,11 @@ async function loadProjects() {
       footer.appendChild(div);
       return;
     }
+
     const a = document.createElement("a");
     a.href = project.url;
     a.classList.add("project-link", "unstyle-link");
-    a.dataset.preview = project.preview;
+    a.dataset.slug = project.slug;
 
     a.innerHTML = `
       <span class="project-name">${project.name}</span>
@@ -30,6 +32,13 @@ async function loadProjects() {
     `;
 
     footer.appendChild(a);
+
+    // pre-load the preview image, stacked and hidden by default
+    const img = document.createElement("img");
+    img.id = `preview-${project.slug}`;
+    img.src = project.preview;
+    img.alt = project.name;
+    previewContainer.appendChild(img);
   });
 }
 
@@ -46,25 +55,32 @@ Promise.all([
   navToggle.href = "/info.html";
 
   const links = document.querySelectorAll(".project-link");
-  const previewImg = document.getElementById("preview-image");
   const footer = document.querySelector(".project-footer");
   const sakuraBox = document.getElementById("sakura-container");
 
-  // listens for a hover and changes index preview image accordingly
-  links.forEach((link) => {
-    link.addEventListener("mouseenter", () => {
-      previewImg.classList.remove("visible");
-      sakuraBox.classList.remove("visible");
+  let hoverCount = 0;
+  let activeImg = null;
 
-      setTimeout(() => {
-        previewImg.src = link.dataset.preview;
-        previewImg.classList.add("visible");
-      }, 300); // match your transition duration
+  links.forEach((link) => {
+    if (link.classList.contains("coming-soon")) return; // skip preview logic entirely if project has no photos
+
+    link.addEventListener("mouseenter", () => {
+      hoverCount++;
+      if (hoverCount === 1) sakuraBox.classList.remove("visible");
+
+      const img = document.getElementById(`preview-${link.dataset.slug}`);
+      if (activeImg && activeImg !== img) activeImg.classList.remove("visible");
+      img.classList.add("visible");
+      activeImg = img;
     });
 
     link.addEventListener("mouseleave", () => {
-      previewImg.classList.remove("visible");
-      sakuraBox.classList.add("visible");
+      hoverCount--;
+      if (hoverCount === 0) {
+        if (activeImg) activeImg.classList.remove("visible");
+        activeImg = null;
+        sakuraBox.classList.add("visible");
+      }
     });
   });
 
@@ -86,7 +102,6 @@ Promise.all([
     }
   });
 
-  // LEAVE OUT FOR NOW
   setTimeout(() => {
     sakuraBox.classList.add("visible");
   }, 400);

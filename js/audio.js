@@ -1,7 +1,7 @@
 const blurWall = document.getElementById("blur-wall");
 const enterBtn = document.getElementById("enter-btn");
 const audio = document.getElementById("bgm");
-audio.volume = 0.5;
+// audio.volume = 0.5;
 
 // Check if this is a returning visitor
 const visited = localStorage.getItem("visited");
