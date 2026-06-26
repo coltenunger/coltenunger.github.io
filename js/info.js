@@ -6,7 +6,7 @@ Promise.all([
     }),
 ]).then(() => {
   const navToggle = document.getElementById("nav-toggle");
-  navToggle.textContent = "index";
+  navToggle.textContent = "INDEX";
   navToggle.href = "/";
 
   function updateClock() {
