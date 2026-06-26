@@ -116,6 +116,6 @@ Promise.all([
 ]).then(() => {
   // set nav toggle button to link back to info page
   const navToggle = document.getElementById("nav-toggle");
-  navToggle.textContent = "info";
+  navToggle.textContent = "INFO";
   navToggle.href = "/info.html";
 });

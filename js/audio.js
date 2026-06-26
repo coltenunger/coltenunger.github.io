@@ -6,21 +6,19 @@ const audio = document.getElementById("bgm");
 // Check if this is a returning visitor
 const visited = localStorage.getItem("visited");
 
-// Returning visitor
+// Returning visitor — skip the blur wall and never play audio
 if (visited) {
   blurWall.style.display = "none";
   blurWall.remove();
-
-  audio.play().catch(() => {
-    throw new Error("Audio will not play because of browser restrictions.");
-  });
 } else {
-  // First visit
+  // First visit — show blur wall, play audio only on click
   enterBtn.addEventListener("click", () => {
-    // Remember the visitor
+    // Remember the visitor so audio never plays again
     localStorage.setItem("visited", "true");
 
-    audio.play();
+    audio.play().catch(() => {
+      throw new Error();
+    });
 
     blurWall.classList.add("hidden");
 
