@@ -35,7 +35,7 @@ async function loadSelected() {
 
   // conditionally render credit div — omit entirely if credit is empty
   const creditHTML = project.credit
-    ? `<div class="detail"><span>${project.credit} <a href="${project.creditUrl}" target="_blank" class="credit-name unstyle-link">${project.creditName}</a></span></div>`
+    ? `<div class="detail"><span>${project.credit} <a href="${project.creditUrl}" target="_blank" class="credit-link plain-link">${project.creditName}</a></span></div>`
     : "";
 
   // build and inject project details into the footer

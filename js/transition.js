@@ -1,11 +1,17 @@
-// transitions.js
-
-window.addEventListener("DOMContentLoaded", () => {
-  const overlay = document.getElementById("overlay");
-
+function fadeOutOverlay() {
+  const fadeTransition = document.getElementById("transition");
   setTimeout(() => {
-    overlay.classList.remove("fade-in");
+    fadeTransition.classList.remove("fade-in");
   }, 50);
+}
+
+window.addEventListener("DOMContentLoaded", fadeOutOverlay);
+
+window.addEventListener("pageshow", (e) => {
+  if (e.persisted) {
+    // page was restored from bfcache, not freshly loaded
+    fadeOutOverlay();
+  }
 });
 
 document.addEventListener("click", (e) => {
@@ -17,8 +23,8 @@ document.addEventListener("click", (e) => {
   if (!href || href.startsWith("#")) return;
 
   e.preventDefault();
-  const overlay = document.getElementById("overlay");
-  overlay.classList.add("fade-in");
+  const fadeTransition = document.getElementById("transition");
+  fadeTransition.classList.add("fade-in");
 
   setTimeout(() => {
     window.location.href = href;

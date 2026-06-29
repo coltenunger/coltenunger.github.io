@@ -22,7 +22,7 @@ async function loadProjects() {
 
     const a = document.createElement("a");
     a.href = project.url;
-    a.classList.add("project-link", "unstyle-link");
+    a.classList.add("project-link", "plain-link");
     a.dataset.slug = project.slug;
 
     a.innerHTML = `
@@ -56,7 +56,7 @@ Promise.all([
 
   const links = document.querySelectorAll(".project-link");
   const footer = document.querySelector(".project-footer");
-  const sakuraBox = document.getElementById("sakura-container");
+  const sakura = document.getElementById("sakura-container");
 
   let hoverCount = 0;
   let activeImg = null;
@@ -66,7 +66,7 @@ Promise.all([
 
     link.addEventListener("mouseenter", () => {
       hoverCount++;
-      if (hoverCount === 1) sakuraBox.classList.remove("visible");
+      if (hoverCount === 1) sakura.classList.remove("visible");
 
       const img = document.getElementById(`preview-${link.dataset.slug}`);
       if (activeImg && activeImg !== img) activeImg.classList.remove("visible");
@@ -79,7 +79,7 @@ Promise.all([
       if (hoverCount === 0) {
         if (activeImg) activeImg.classList.remove("visible");
         activeImg = null;
-        sakuraBox.classList.add("visible");
+        sakura.classList.add("visible");
       }
     });
   });
@@ -103,6 +103,6 @@ Promise.all([
   });
 
   setTimeout(() => {
-    sakuraBox.classList.add("visible");
+    sakura.classList.add("visible");
   }, 400);
 });
