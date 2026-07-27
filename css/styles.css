@@ -9,12 +9,14 @@
 }
 
 :root {
+  --default-font-size: 0.75rem;
   --padding: 1rem;
   --opacity-slow: opacity 0.5s ease-in-out;
   --opacity-fast: opacity 0.3s ease-in-out;
   --dimmed: 0.15;
   --z-bg: -2;
   --z-content: -1;
+  --z-zones: 5;
   --z-ui: 10; /* navbar and project links */
   --z-modal: 100;
   --z-top: 999;
@@ -22,7 +24,7 @@
 
 body {
   font-family: "Times New Roman", serif;
-  font-size: 12px;
+  font-size: var(--default-font-size);
   line-height: 1.4;
   letter-spacing: -0.01em;
   background: #fff;
@@ -71,6 +73,24 @@ button {
 
 #enter-btn:hover {
   animation: flash 0.5s ease-in-out;
+}
+
+#enter-btn::before,
+#enter-btn::after {
+  opacity: 0;
+}
+
+#enter-btn::before {
+  content: "[";
+}
+
+#enter-btn::after {
+  content: "]";
+}
+
+#enter-btn:hover::before,
+#enter-btn:hover::after {
+  opacity: 1;
 }
 
 @keyframes flash {
@@ -177,14 +197,13 @@ button {
   right: 0;
   color: #fff;
   mix-blend-mode: difference;
-  z-index: 10;
+  z-index: var(--z-ui);
 }
 
 .project-link {
   display: flex;
   flex-direction: column;
   transition: var(--opacity-slow);
-  z-index: 10;
 }
 
 .project-link.dimmed {
@@ -263,7 +282,7 @@ button {
   width: 12rem;
 }
 
-/* SELECTED DETAIL PAGE */
+/* PROJECT DETAIL PAGE */
 .slideshow {
   display: grid;
   place-items: center;
@@ -296,7 +315,7 @@ button {
   height: 100vh;
   width: 50vw;
   cursor: none;
-  z-index: var(--z-ui);
+  z-index: var(--z-zones); /* below navbar which should be higher */
 }
 
 #prev-zone {
@@ -313,7 +332,7 @@ button {
   z-index: var(--z-modal);
   transform: translate(-50%, -50%);
   opacity: 0;
-  font-size: inherit;
+  font-size: var(--default-font-size);
   transition: var(--opacity-fast);
   color: #fff;
   mix-blend-mode: difference;
@@ -364,6 +383,10 @@ button {
 @media (max-width: 1320px) {
 }
 
-/* MOBILE AND TABLET */
-@media (max-width: 768px) and (max-width: 1024px) {
+/* TABLET */
+@media (max-width: 1024px) {
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
 }

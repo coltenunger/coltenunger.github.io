@@ -3,7 +3,7 @@ const enter = document.getElementById("enter-btn");
 const audio = document.getElementById("bgm");
 
 if (localStorage.getItem("visited")) {
-  audio.play().catch(console.error);
+  // audio.play().catch(console.error);
   blur.remove();
 } else {
   enter.addEventListener("click", () => {
