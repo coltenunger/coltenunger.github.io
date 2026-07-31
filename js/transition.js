@@ -16,13 +16,13 @@ window.addEventListener("pageshow", (e) => {
 
 document.addEventListener("click", (e) => {
   const link = e.target.closest("a");
-  if (!link) return;
-  if (link.target === "_blank") return;
+  if (!link || link.target === "_blank") return;
 
   const href = link.getAttribute("href");
   if (!href || href.startsWith("#")) return;
 
   e.preventDefault();
+
   const fadeTransition = document.getElementById("transition");
   fadeTransition.classList.add("fade-in");
 
