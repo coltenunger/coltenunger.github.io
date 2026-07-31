@@ -1,5 +1,6 @@
-async function renderProjects() {
-  const projects = await loadJSON("json/details.json");
+async function loadProjects() {
+  const response = await fetch("json/details.json");
+  const projects = await response.json();
   const footer = document.querySelector(".project-footer");
   const previewContainer = document.getElementById("preview-container");
 
@@ -19,18 +20,18 @@ async function renderProjects() {
       return;
     }
 
-    const link = document.createElement("a");
-    link.href = project.url;
-    link.classList.add("project-link", "plain-link");
-    link.dataset.slug = project.slug;
+    const a = document.createElement("a");
+    a.href = project.url;
+    a.classList.add("project-link", "plain-link");
+    a.dataset.slug = project.slug;
 
-    link.innerHTML = `
+    a.innerHTML = `
       <span class="project-name">${project.name}</span>
       <span class="project-category">${project.category}</span>
       <span class="project-year">${project.year}</span>
     `;
 
-    footer.appendChild(link);
+    footer.appendChild(a);
 
     // pre-load the preview image, stacked and hidden by default
     const img = document.createElement("img");
@@ -41,18 +42,24 @@ async function renderProjects() {
   });
 }
 
-async function init() {
-  await Promise.all([
-    loadComponent("components/nav-header.html", "nav-header"),
-    renderProjects(),
-  ]);
-
-  setNavToggle("INFO", "/info.html");
+Promise.all([
+  fetch("components/nav-header.html")
+    .then((response) => response.text())
+    .then((data) => {
+      document.getElementById("nav-header").innerHTML = data;
+    }),
+  loadProjects(),
+]).then(() => {
+  const navToggle = document.getElementById("nav-toggle");
+  navToggle.textContent = "INFO";
+  navToggle.href = "/info.html";
 
   const links = document.querySelectorAll(".project-link");
+  const footer = document.querySelector(".project-footer");
   const sakura = document.getElementById("sakura-container");
-  let activeImg = null;
+
   let hoverCount = 0;
+  let activeImg = null;
 
   links.forEach((link) => {
     if (link.classList.contains("coming-soon")) return; // skip preview logic entirely if project has no photos
@@ -78,10 +85,10 @@ async function init() {
   });
 
   // dimming
-  const footer = document.querySelector(".project-footer");
   footer.addEventListener("mouseover", (e) => {
     const link = e.target.closest(".project-link");
     if (!link) return;
+
     links.forEach((l) => l.classList.add("dimmed"));
     link.classList.remove("dimmed");
   });
@@ -95,7 +102,7 @@ async function init() {
     }
   });
 
-  setTimeout(() => sakura.classList.add("visible"), 400);
-}
-
-document.addEventListener("DOMContentLoaded", init);
+  setTimeout(() => {
+    sakura.classList.add("visible");
+  }, 400);
+});
