@@ -1,33 +1,26 @@
-Promise.all([
-  fetch("/components/nav-header.html")
-    .then((res) => res.text())
-    .then((data) => {
-      document.getElementById("nav-header").innerHTML = data;
-    }),
-]).then(() => {
-  const navToggle = document.getElementById("nav-toggle");
-  navToggle.textContent = "INDEX";
-  navToggle.href = "/";
+async function init() {
+  await loadComponent("/components/nav-header.html", "nav-header");
+  setNavToggle("INDEX", "/");
 
   function updateClock() {
     const now = new Date();
-    document.getElementById("clock").textContent = now
-      .toLocaleString("en-US", {
-        weekday: "short",
-        month: "short",
-        day: "numeric",
-        hour: "2-digit",
-        minute: "2-digit",
-        second: "2-digit",
-        timeZoneName: "short",
-      })
-      .replace(/(\d{1,2}), /, "$1 ");
-    // or for no commas       .replace(/,/g, "");
+    const formatted = now.toLocaleString("en-US", {
+      weekday: "short",
+      month: "short",
+      day: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      timeZoneName: "short",
+    });
+    
+    document.getElementById("clock").textContent = formatted.replace(/(\d{1,2}), /, "$1 ");
   }
 
   updateClock();
   setInterval(updateClock, 1000);
 
-  document.getElementById("copyright").textContent =
-    `[Copyright] ${new Date().getFullYear()} Colten Wade`;
-});
+  document.getElementById("copyright").textContent = `[Copyright] ${new Date().getFullYear()} Colten Wade`;
+}
+
+document.addEventListener("DOMContentLoaded", init);
